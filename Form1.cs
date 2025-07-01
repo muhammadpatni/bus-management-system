@@ -17,9 +17,25 @@ namespace bus_management_system
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+       
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer1.Start(); 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressbar.Value < 100)
+            {
+                progressbar.Value += 1;
+                label2.Text = progressbar.Value.ToString() + "%";
+            }
+            else
+            {
+            timer1.Stop();
+                Application.Exit();
+            }
         }
     }
 }
