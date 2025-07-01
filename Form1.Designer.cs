@@ -37,9 +37,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(522, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Id muhammad pagal";
+            this.label1.Text = "Id muhammad ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Button1
