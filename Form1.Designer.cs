@@ -38,10 +38,10 @@
             this.label1.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(71, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(701, 22);
+            this.label1.Size = new System.Drawing.Size(744, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "haram hi hai pagal only certified and declared she herself accept that she hi pag" +
-    "al  ";
+            this.label1.Text = "muhammad hi hai pagal only certified and declared she herself accept that she hi " +
+    "pagal  ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Button1
