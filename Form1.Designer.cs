@@ -39,9 +39,9 @@
             this.label1.Font = new System.Drawing.Font("Arial Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(71, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 22);
+            this.label1.Size = new System.Drawing.Size(62, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "muhammad";
+            this.label1.Text = "haram";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2Button1
