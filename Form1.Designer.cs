@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ProgressBar1 = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.SuspendLayout();
             // 
             // label1
@@ -58,11 +59,21 @@
             this.guna2Button1.TabIndex = 1;
             this.guna2Button1.Text = "haram pagal";
             // 
+            // guna2ProgressBar1
+            // 
+            this.guna2ProgressBar1.Location = new System.Drawing.Point(36, 360);
+            this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.Size = new System.Drawing.Size(736, 30);
+            this.guna2ProgressBar1.TabIndex = 2;
+            this.guna2ProgressBar1.Text = "guna2ProgressBar1";
+            this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.guna2ProgressBar1);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -76,6 +87,7 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2ProgressBar guna2ProgressBar1;
     }
 }
 
