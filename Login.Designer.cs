@@ -176,13 +176,13 @@
             // 
             // btnlogin
             // 
-            this.btnlogin.BorderRadius = 7;
+            this.btnlogin.BorderRadius = 15;
             this.btnlogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
             this.btnlogin.Location = new System.Drawing.Point(12, 498);
             this.btnlogin.Name = "btnlogin";
