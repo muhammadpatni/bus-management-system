@@ -19,7 +19,7 @@ namespace bus_management_system
 
         private void Registration_page_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = label1;
         }
 
         private void txtpassword_TextChanged(object sender, EventArgs e)
@@ -57,11 +57,7 @@ namespace bus_management_system
 
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+      
         private void guna2TextBox4_TextChanged(object sender, EventArgs e)
         {
 
@@ -85,6 +81,13 @@ namespace bus_management_system
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }

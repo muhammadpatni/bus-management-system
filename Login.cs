@@ -75,6 +75,8 @@ namespace bus_management_system
             this.ActiveControl = label1;
             txtusername.Select(0, 0);
             txtpassword.Select(0, 0);
+            lbloginas.Location = new Point(12, 280);
+            txtlogin_as.Location = new Point(12, 304);
         }
 
         private void txtusername_MouseClick(object sender, MouseEventArgs e)
@@ -129,6 +131,45 @@ namespace bus_management_system
         }
 
         private void txtlogin_as_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            txtpassword.Enabled = true;
+            txtusername.Enabled = true;
+            lbloginas.Location = new Point(12, 200);
+            txtlogin_as.Location = new Point(12, 224);
+
+            if (txtlogin_as.Text == "admin")
+            {
+                lbusername.Visible = true;
+                lbpassword.Visible = true;
+                txtusername.Visible = true;
+                txtpassword.Visible = true;
+                showpassword.Visible = true;
+                btnlogin.Visible = true;
+                linkregisteration.Visible = false;
+            }
+            else
+            {
+                lbusername.Visible = true;
+                lbpassword.Visible = true;
+                txtusername.Visible = true;
+                txtpassword.Visible = true;
+                showpassword.Visible = true;
+                btnlogin.Visible = true;
+                linkregisteration.Visible = true;
+
+            }
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registration_page registration_Page= new Registration_page();
+            registration_Page.Show();
+            this.Hide();
+        }
+
+        private void txtlogin_as_SelectedValueChanged(object sender, EventArgs e)
         {
 
         }

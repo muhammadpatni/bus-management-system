@@ -40,6 +40,7 @@
             // 
             // progressbar
             // 
+            this.progressbar.BorderRadius = 15;
             this.progressbar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.progressbar.Location = new System.Drawing.Point(12, 317);
             this.progressbar.Name = "progressbar";

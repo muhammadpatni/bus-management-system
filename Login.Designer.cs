@@ -30,15 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbusername = new System.Windows.Forms.Label();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbpassword = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbloginas = new System.Windows.Forms.Label();
             this.txtlogin_as = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Lbnotification = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkregisteration = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -73,20 +72,22 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(364, 45);
             this.txtpassword.TabIndex = 11;
+            this.txtpassword.Visible = false;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             this.txtpassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtpassword_MouseClick);
             // 
-            // label4
+            // lbusername
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label4.Location = new System.Drawing.Point(12, 280);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 21);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Username";
+            this.lbusername.AutoSize = true;
+            this.lbusername.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbusername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.lbusername.Location = new System.Drawing.Point(12, 280);
+            this.lbusername.Name = "lbusername";
+            this.lbusername.Size = new System.Drawing.Size(83, 21);
+            this.lbusername.TabIndex = 10;
+            this.lbusername.Text = "Username";
+            this.lbusername.Visible = false;
             // 
             // txtusername
             // 
@@ -108,20 +109,22 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(364, 45);
             this.txtusername.TabIndex = 9;
+            this.txtusername.Visible = false;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             this.txtusername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtusername_MouseClick);
             // 
-            // label3
+            // lbpassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label3.Location = new System.Drawing.Point(11, 369);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 21);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Password";
+            this.lbpassword.AutoSize = true;
+            this.lbpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.lbpassword.Location = new System.Drawing.Point(11, 369);
+            this.lbpassword.Name = "lbpassword";
+            this.lbpassword.Size = new System.Drawing.Size(79, 21);
+            this.lbpassword.TabIndex = 8;
+            this.lbpassword.Text = "Password";
+            this.lbpassword.Visible = false;
             // 
             // showpassword
             // 
@@ -141,6 +144,7 @@
             this.showpassword.UncheckedState.BorderRadius = 0;
             this.showpassword.UncheckedState.BorderThickness = 0;
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.showpassword.Visible = false;
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
             // btnlogin
@@ -158,18 +162,19 @@
             this.btnlogin.Size = new System.Drawing.Size(364, 45);
             this.btnlogin.TabIndex = 16;
             this.btnlogin.Text = "Login";
+            this.btnlogin.Visible = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // label2
+            // lbloginas
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label2.Location = new System.Drawing.Point(12, 200);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Login As";
+            this.lbloginas.AutoSize = true;
+            this.lbloginas.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbloginas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.lbloginas.Location = new System.Drawing.Point(12, 200);
+            this.lbloginas.Name = "lbloginas";
+            this.lbloginas.Size = new System.Drawing.Size(73, 21);
+            this.lbloginas.TabIndex = 14;
+            this.lbloginas.Text = "Login As";
             // 
             // txtlogin_as
             // 
@@ -191,32 +196,25 @@
             this.txtlogin_as.Size = new System.Drawing.Size(364, 36);
             this.txtlogin_as.TabIndex = 15;
             this.txtlogin_as.SelectedIndexChanged += new System.EventHandler(this.txtlogin_as_SelectedIndexChanged);
+            this.txtlogin_as.SelectedValueChanged += new System.EventHandler(this.txtlogin_as_SelectedValueChanged);
             // 
-            // Lbnotification
+            // linkregisteration
             // 
-            this.Lbnotification.AutoSize = true;
-            this.Lbnotification.ForeColor = System.Drawing.Color.Red;
-            this.Lbnotification.Location = new System.Drawing.Point(251, 263);
-            this.Lbnotification.Name = "Lbnotification";
-            this.Lbnotification.Size = new System.Drawing.Size(111, 13);
-            this.Lbnotification.TabIndex = 17;
-            this.Lbnotification.Text = "select login option first";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.Location = new System.Drawing.Point(120, 567);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(139, 16);
-            this.linkLabel1.TabIndex = 18;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Don\'t have an account";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.AutoSize = true;
+            this.linkregisteration.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkregisteration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.Location = new System.Drawing.Point(120, 567);
+            this.linkregisteration.Name = "linkregisteration";
+            this.linkregisteration.Size = new System.Drawing.Size(139, 16);
+            this.linkregisteration.TabIndex = 18;
+            this.linkregisteration.TabStop = true;
+            this.linkregisteration.Text = "Don\'t have an account";
+            this.linkregisteration.Visible = false;
+            this.linkregisteration.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkregisteration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // Login
             // 
@@ -224,16 +222,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 591);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.Lbnotification);
+            this.Controls.Add(this.linkregisteration);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtlogin_as);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbloginas);
             this.Controls.Add(this.showpassword);
             this.Controls.Add(this.txtpassword);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbusername);
             this.Controls.Add(this.txtusername);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lbpassword);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -249,14 +246,13 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbusername;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbpassword;
         private Guna.UI2.WinForms.Guna2CheckBox showpassword;
         private Guna.UI2.WinForms.Guna2Button btnlogin;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbloginas;
         private Guna.UI2.WinForms.Guna2ComboBox txtlogin_as;
-        private System.Windows.Forms.Label Lbnotification;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkregisteration;
     }
 }
