@@ -1,14 +1,16 @@
-DROP DATABASE BMS;
-USE BMS;
-CREATE TABLE login(
-login_as varchar(50),
-username varchar(100),
-password varchar (150)
-);
-INSERT INTO login (login_as, username, password) VALUES
-('admin', 'haram zainab', 'admin123'),
-('admin', 'muhammad', 'admin123'),
-('user', 'ayesha khan', 'user123'),
-('user', 'ali raza', 'user123');
-
+use BMS;
 select * from login;
+
+drop table login;
+
+CREATE TABLE Users (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(100),
+    Phone_No VARCHAR(15),
+    CNIC VARCHAR(15),
+    Gmail VARCHAR(100),
+    Profile_pic VARBINARY(MAX),
+    Role VARCHAR(50),
+    Username VARCHAR(50),
+    Password VARCHAR(255)
+);

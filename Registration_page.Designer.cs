@@ -49,9 +49,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
             this.back = new Guna.UI2.WinForms.Guna2Button();
-            this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(281, 53);
             this.label1.TabIndex = 3;
             this.label1.Text = "Registration";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -77,7 +78,6 @@
             this.label2.Size = new System.Drawing.Size(110, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Login Details";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
@@ -109,7 +109,6 @@
             this.txtpasswordreg.SelectedText = "";
             this.txtpasswordreg.Size = new System.Drawing.Size(242, 31);
             this.txtpasswordreg.TabIndex = 15;
-            this.txtpasswordreg.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
             // label3
             // 
@@ -121,7 +120,6 @@
             this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 14;
             this.label3.Text = "Username";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtusernamereg
             // 
@@ -142,7 +140,6 @@
             this.txtusernamereg.SelectedText = "";
             this.txtusernamereg.Size = new System.Drawing.Size(242, 31);
             this.txtusernamereg.TabIndex = 13;
-            this.txtusernamereg.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
             // label5
             // 
@@ -154,7 +151,6 @@
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 12;
             this.label5.Text = "Password";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -166,7 +162,6 @@
             this.label6.Size = new System.Drawing.Size(133, 21);
             this.label6.TabIndex = 16;
             this.label6.Text = "Personel Details";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -178,7 +173,6 @@
             this.label7.Size = new System.Drawing.Size(28, 37);
             this.label7.TabIndex = 17;
             this.label7.Text = "_";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel1
             // 
@@ -207,7 +201,6 @@
             this.txtphonereg.SelectedText = "";
             this.txtphonereg.Size = new System.Drawing.Size(242, 31);
             this.txtphonereg.TabIndex = 22;
-            this.txtphonereg.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // label8
             // 
@@ -239,7 +232,6 @@
             this.txtnamereg.SelectedText = "";
             this.txtnamereg.Size = new System.Drawing.Size(242, 31);
             this.txtnamereg.TabIndex = 20;
-            this.txtnamereg.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // label9
             // 
@@ -279,7 +271,6 @@
             this.txtcnicreg.SelectedText = "";
             this.txtcnicreg.Size = new System.Drawing.Size(242, 31);
             this.txtcnicreg.TabIndex = 26;
-            this.txtcnicreg.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // label10
             // 
@@ -311,7 +302,6 @@
             this.txtemailreg.SelectedText = "";
             this.txtemailreg.Size = new System.Drawing.Size(242, 31);
             this.txtemailreg.TabIndex = 24;
-            this.txtemailreg.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged);
             // 
             // label11
             // 
@@ -339,6 +329,7 @@
             this.btnlogin.Size = new System.Drawing.Size(312, 45);
             this.btnlogin.TabIndex = 27;
             this.btnlogin.Text = "Register";
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // back
             // 
@@ -357,18 +348,6 @@
             this.back.Text = " back";
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
-            // profilepic
-            // 
-            this.profilepic.BackColor = System.Drawing.Color.White;
-            this.profilepic.FillColor = System.Drawing.Color.DimGray;
-            this.profilepic.ImageRotate = 0F;
-            this.profilepic.Location = new System.Drawing.Point(659, 294);
-            this.profilepic.Name = "profilepic";
-            this.profilepic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.profilepic.Size = new System.Drawing.Size(160, 160);
-            this.profilepic.TabIndex = 29;
-            this.profilepic.TabStop = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -379,7 +358,6 @@
             this.label12.Size = new System.Drawing.Size(123, 21);
             this.label12.TabIndex = 30;
             this.label12.Text = "Profile Picture";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -392,6 +370,21 @@
             this.label13.Size = new System.Drawing.Size(92, 32);
             this.label13.TabIndex = 31;
             this.label13.Text = "Upload";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // profilepic
+            // 
+            this.profilepic.BackColor = System.Drawing.Color.Transparent;
+            this.profilepic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.profilepic.FillColor = System.Drawing.Color.DimGray;
+            this.profilepic.ImageRotate = 0F;
+            this.profilepic.Location = new System.Drawing.Point(659, 294);
+            this.profilepic.Name = "profilepic";
+            this.profilepic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.profilepic.Size = new System.Drawing.Size(160, 160);
+            this.profilepic.TabIndex = 29;
+            this.profilepic.TabStop = false;
+            this.profilepic.Click += new System.EventHandler(this.profilepic_Click);
             // 
             // Registration_page
             // 

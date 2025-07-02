@@ -39,6 +39,8 @@
             this.txtlogin_as = new Guna.UI2.WinForms.Guna2ComboBox();
             this.linkregisteration = new System.Windows.Forms.LinkLabel();
             this.lbnotif = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -225,12 +227,24 @@
             this.lbnotif.TabIndex = 19;
             this.lbnotif.Text = "select login option first";
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::bus_management_system.Properties.Resources.key__1_;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(123, 65);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 20;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 591);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.lbnotif);
             this.Controls.Add(this.linkregisteration);
             this.Controls.Add(this.btnlogin);
@@ -247,6 +261,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,5 +280,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtlogin_as;
         private System.Windows.Forms.LinkLabel linkregisteration;
         private System.Windows.Forms.Label lbnotif;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
