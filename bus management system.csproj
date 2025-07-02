@@ -75,6 +75,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration_page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration_page.Designer.cs">
+      <DependentUpon>Registration_page.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="loader.resx">
       <DependentUpon>loader.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registration_page.resx">
+      <DependentUpon>Registration_page.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

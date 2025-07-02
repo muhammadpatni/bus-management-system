@@ -10,3 +10,5 @@ INSERT INTO login (login_as, username, password) VALUES
 ('admin', 'muhammad', 'admin123'),
 ('user', 'ayesha khan', 'user123'),
 ('user', 'ali raza', 'user123');
+
+select * from login;
