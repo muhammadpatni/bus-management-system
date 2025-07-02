@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtlogin_as = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
+            this.Lbnotification = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -61,6 +62,7 @@
             this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.Enabled = false;
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -70,6 +72,7 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(364, 45);
             this.txtpassword.TabIndex = 11;
+            this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             this.txtpassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtpassword_MouseClick);
             // 
@@ -94,6 +97,7 @@
             this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.Enabled = false;
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -103,6 +107,7 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(364, 45);
             this.txtusername.TabIndex = 9;
+            this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             this.txtusername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtusername_MouseClick);
             // 
@@ -146,7 +151,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 21);
             this.label2.TabIndex = 14;
-            this.label2.Text = "Login_as";
+            this.label2.Text = "Login As";
             // 
             // txtlogin_as
             // 
@@ -167,6 +172,7 @@
             this.txtlogin_as.Name = "txtlogin_as";
             this.txtlogin_as.Size = new System.Drawing.Size(364, 36);
             this.txtlogin_as.TabIndex = 15;
+            this.txtlogin_as.SelectedIndexChanged += new System.EventHandler(this.txtlogin_as_SelectedIndexChanged);
             // 
             // btnlogin
             // 
@@ -185,12 +191,23 @@
             this.btnlogin.Text = "Login";
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
+            // Lbnotification
+            // 
+            this.Lbnotification.AutoSize = true;
+            this.Lbnotification.ForeColor = System.Drawing.Color.Red;
+            this.Lbnotification.Location = new System.Drawing.Point(251, 263);
+            this.Lbnotification.Name = "Lbnotification";
+            this.Lbnotification.Size = new System.Drawing.Size(111, 13);
+            this.Lbnotification.TabIndex = 17;
+            this.Lbnotification.Text = "select login option first";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 569);
+            this.Controls.Add(this.Lbnotification);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtlogin_as);
             this.Controls.Add(this.label2);
@@ -221,5 +238,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox txtlogin_as;
         private Guna.UI2.WinForms.Guna2Button btnlogin;
+        private System.Windows.Forms.Label Lbnotification;
     }
 }

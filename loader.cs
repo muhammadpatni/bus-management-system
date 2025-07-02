@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace bus_management_system
 {
-    public partial class Form1 : Form
+    public partial class loader : Form
     {
-        public Form1()
+        public loader()
         {
             InitializeComponent();
         }

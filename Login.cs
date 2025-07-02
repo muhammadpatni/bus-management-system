@@ -21,13 +21,14 @@ namespace bus_management_system
         SqlConnection con = new SqlConnection(Constring);
 
         public void perform_login()
-        {
-            string query = "SELECT * FROM login WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "'";
-            DataTable dt = new DataTable();
+        { 
+            string query = "SELECT * FROM login WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "' AND login_as =' "+txtlogin_as.Text+" ' ";
+            DataTable dt = new DataTable(); 
             try
             {
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 adapter.Fill(dt);
+
 
                 if (dt.Rows.Count > 0)
                 {
@@ -115,6 +116,24 @@ namespace bus_management_system
             {
                 txtpassword.UseSystemPasswordChar = true;
             }
+        }
+
+        private void txtusername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtlogin_as_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Lbnotification.Visible = false;
+            txtpassword.Enabled=true;
+            txtusername.Enabled = true;
+
         }
     }
 }
