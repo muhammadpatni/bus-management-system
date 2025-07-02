@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -77,6 +78,7 @@
             // 
             this.txtpassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.txtpassword.BorderRadius = 7;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpassword.DefaultText = "Enter Password";
             this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -86,11 +88,11 @@
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtpassword.Location = new System.Drawing.Point(5, 216);
+            this.txtpassword.Location = new System.Drawing.Point(5, 199);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PlaceholderText = "";
             this.txtpassword.SelectedText = "";
-            this.txtpassword.Size = new System.Drawing.Size(265, 45);
+            this.txtpassword.Size = new System.Drawing.Size(242, 31);
             this.txtpassword.TabIndex = 15;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             // 
@@ -110,6 +112,7 @@
             // 
             this.txtusername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
             this.txtusername.BorderRadius = 7;
+            this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtusername.DefaultText = "Enter Username";
             this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -123,7 +126,7 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.PlaceholderText = "";
             this.txtusername.SelectedText = "";
-            this.txtusername.Size = new System.Drawing.Size(265, 45);
+            this.txtusername.Size = new System.Drawing.Size(242, 31);
             this.txtusername.TabIndex = 13;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             // 
@@ -132,7 +135,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label5.Location = new System.Drawing.Point(4, 192);
+            this.label5.Location = new System.Drawing.Point(4, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 21);
             this.label5.TabIndex = 12;
@@ -163,12 +166,21 @@
             this.label7.Text = "_";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.panel1.Location = new System.Drawing.Point(126, 93);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(715, 5);
+            this.panel1.TabIndex = 18;
+            // 
             // Registration_page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(842, 633);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtpassword);
@@ -199,5 +211,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
     }
 }
