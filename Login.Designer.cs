@@ -34,10 +34,11 @@
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtlogin_as = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
             this.Lbnotification = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -142,6 +143,23 @@
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
+            // btnlogin
+            // 
+            this.btnlogin.BorderRadius = 15;
+            this.btnlogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.btnlogin.ForeColor = System.Drawing.Color.White;
+            this.btnlogin.Location = new System.Drawing.Point(12, 498);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(364, 45);
+            this.btnlogin.TabIndex = 16;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -174,23 +192,6 @@
             this.txtlogin_as.TabIndex = 15;
             this.txtlogin_as.SelectedIndexChanged += new System.EventHandler(this.txtlogin_as_SelectedIndexChanged);
             // 
-            // btnlogin
-            // 
-            this.btnlogin.BorderRadius = 15;
-            this.btnlogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(12, 498);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(364, 45);
-            this.btnlogin.TabIndex = 16;
-            this.btnlogin.Text = "Login";
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
-            // 
             // Lbnotification
             // 
             this.Lbnotification.AutoSize = true;
@@ -201,12 +202,29 @@
             this.Lbnotification.TabIndex = 17;
             this.Lbnotification.Text = "select login option first";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.linkLabel1.Location = new System.Drawing.Point(120, 567);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(139, 16);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Don\'t have an account";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(388, 569);
+            this.ClientSize = new System.Drawing.Size(388, 591);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Lbnotification);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtlogin_as);
@@ -235,9 +253,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CheckBox showpassword;
+        private Guna.UI2.WinForms.Guna2Button btnlogin;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox txtlogin_as;
-        private Guna.UI2.WinForms.Guna2Button btnlogin;
         private System.Windows.Forms.Label Lbnotification;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

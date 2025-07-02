@@ -130,9 +130,6 @@ namespace bus_management_system
 
         private void txtlogin_as_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Lbnotification.Visible = false;
-            txtpassword.Enabled=true;
-            txtusername.Enabled = true;
 
         }
     }
