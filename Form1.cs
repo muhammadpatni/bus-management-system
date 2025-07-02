@@ -34,7 +34,9 @@ namespace bus_management_system
             else
             {
             timer1.Stop();
-                Application.Exit();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
             }
         }
     }
