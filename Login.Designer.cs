@@ -38,6 +38,7 @@
             this.lbloginas = new System.Windows.Forms.Label();
             this.txtlogin_as = new Guna.UI2.WinForms.Guna2ComboBox();
             this.linkregisteration = new System.Windows.Forms.LinkLabel();
+            this.lbnotif = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +73,6 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(364, 45);
             this.txtpassword.TabIndex = 11;
-            this.txtpassword.Visible = false;
             this.txtpassword.TextChanged += new System.EventHandler(this.txtpassword_TextChanged);
             this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             this.txtpassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtpassword_MouseClick);
@@ -87,7 +87,6 @@
             this.lbusername.Size = new System.Drawing.Size(83, 21);
             this.lbusername.TabIndex = 10;
             this.lbusername.Text = "Username";
-            this.lbusername.Visible = false;
             // 
             // txtusername
             // 
@@ -109,7 +108,6 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(364, 45);
             this.txtusername.TabIndex = 9;
-            this.txtusername.Visible = false;
             this.txtusername.TextChanged += new System.EventHandler(this.txtusername_TextChanged);
             this.txtusername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtusername_KeyDown);
             this.txtusername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtusername_MouseClick);
@@ -124,7 +122,6 @@
             this.lbpassword.Size = new System.Drawing.Size(79, 21);
             this.lbpassword.TabIndex = 8;
             this.lbpassword.Text = "Password";
-            this.lbpassword.Visible = false;
             // 
             // showpassword
             // 
@@ -133,6 +130,7 @@
             this.showpassword.CheckedState.BorderRadius = 0;
             this.showpassword.CheckedState.BorderThickness = 0;
             this.showpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.showpassword.Enabled = false;
             this.showpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.showpassword.Location = new System.Drawing.Point(254, 446);
@@ -144,7 +142,6 @@
             this.showpassword.UncheckedState.BorderRadius = 0;
             this.showpassword.UncheckedState.BorderThickness = 0;
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.showpassword.Visible = false;
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
             // btnlogin
@@ -154,6 +151,7 @@
             this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnlogin.Enabled = false;
             this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
@@ -162,7 +160,6 @@
             this.btnlogin.Size = new System.Drawing.Size(364, 45);
             this.btnlogin.TabIndex = 16;
             this.btnlogin.Text = "Login";
-            this.btnlogin.Visible = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
             // lbloginas
@@ -216,12 +213,25 @@
             this.linkregisteration.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             this.linkregisteration.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // lbnotif
+            // 
+            this.lbnotif.AutoSize = true;
+            this.lbnotif.BackColor = System.Drawing.Color.White;
+            this.lbnotif.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbnotif.ForeColor = System.Drawing.Color.Red;
+            this.lbnotif.Location = new System.Drawing.Point(203, 263);
+            this.lbnotif.Name = "lbnotif";
+            this.lbnotif.Size = new System.Drawing.Size(163, 19);
+            this.lbnotif.TabIndex = 19;
+            this.lbnotif.Text = "select login option first";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 591);
+            this.Controls.Add(this.lbnotif);
             this.Controls.Add(this.linkregisteration);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtlogin_as);
@@ -254,5 +264,6 @@
         private System.Windows.Forms.Label lbloginas;
         private Guna.UI2.WinForms.Guna2ComboBox txtlogin_as;
         private System.Windows.Forms.LinkLabel linkregisteration;
+        private System.Windows.Forms.Label lbnotif;
     }
 }
