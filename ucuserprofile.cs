@@ -16,5 +16,15 @@ namespace bus_management_system
         {
             InitializeComponent();
         }
+
+        private void ucuserprofile_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
