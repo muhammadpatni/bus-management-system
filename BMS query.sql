@@ -1,16 +1,8 @@
 use BMS;
-select * from login;
-
-drop table login;
-
-CREATE TABLE Users (
-    Id INT IDENTITY(1,1) PRIMARY KEY,
-    Name VARCHAR(100),
-    Phone_No VARCHAR(15),
-    CNIC VARCHAR(15),
-    Gmail VARCHAR(100),
-    Profile_pic VARBINARY(MAX),
-    Role VARCHAR(50),
-    Username VARCHAR(50),
-    Password VARCHAR(255)
-);
+alter table Users drop column Role;
+select*from Users;
+insert into	Users(Name, Phone_No,CNIC, Gmail, Username, Password)values
+('haram zainab','03152958789','	4240170756572','haramzainab@gmail.com','haram zainab','user123')
+,('arwa','03152958789','	4240170756572','haramzainab@gmail.com','haram zainab','user123')
+;
+delete from Users ;
