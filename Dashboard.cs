@@ -37,6 +37,10 @@ namespace bus_management_system
                 {
                     slidebarexpand = false;
                     slidebartimer.Stop();
+                    lbtitle.Location = new Point(401, 7);
+                    profilepic.Location = new Point(6, 38);
+                    profilepic.Size = new Size(55, 55);
+                    lbusername.Visible = false;
                 }
             }
             else
@@ -46,90 +50,94 @@ namespace bus_management_system
                 {
                     slidebarexpand = true;
                     slidebartimer.Stop();
+                    lbtitle.Location = new Point(309, 6);
+                    profilepic.Location = new Point(44, 2);
+                    profilepic.Size = new Size(177, 177);
+                    lbusername.Visible = true;
                 }
 
 
             }
         }
 
-        private void panelmain_Paint(object sender, PaintEventArgs e)
+        public void loadform(object Form)
         {
-
+            if (this.panelmain.Controls.Count > 0)
+            {
+                this.panelmain.Controls.RemoveAt(0);
+            }
+            Form f = Form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.panelmain.Controls.Add(f);
+            this.panelmain.Tag = f;
+            f.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void profilepic_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labellogout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void btnmanagebook_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnliboperation_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnmemmanagement_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btndashboard_Click(object sender, EventArgs e)
         {
-
+            btndashboarduser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            btnmybookinguser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+        
         }
 
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnclose_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void btnmenu_Click(object sender, EventArgs e)
         {
-
+            slidebartimer.Start();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btnmybookinguser_Click(object sender, EventArgs e)
         {
-
+            btnmybookinguser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
         }
 
-        private void guna2Panel2_Paint_2(object sender, PaintEventArgs e)
+        private void btnbookuser_Click(object sender, EventArgs e)
+        {
+            btnbookuser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            btnmybookinguser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+        }
+        
+
+
+
+        private void btnprofileuser_Click(object sender, EventArgs e)
+        {
+            btnprofileuser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            btnmybookinguser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+        
+    }
+
+        private void btnlogout_Click(object sender, EventArgs e)
         {
 
+            btnlogout.FillColor = System.Drawing.Color.MediumSeaGreen;
+            btnmybookinguser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
         }
     }
 }
