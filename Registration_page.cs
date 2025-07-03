@@ -167,32 +167,39 @@ namespace bus_management_system
                     MessageBox.Show("Password already taken,please enter unique password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                string query = "insert into Users (Name,Phone_No,Gmail,CNIC,Profile_pic,Username,Password) values(@Name,@Phone_no,@Gmail,@CNIC,@Profile_pic,@Username,@Password)";
+                try
+                {
+                    string query = "insert into Users (Name,Phone_No,Gmail,CNIC,Profile_pic,Username,Password) values(@Name,@Phone_no,@Gmail,@CNIC,@Profile_pic,@Username,@Password)";
 
                     using (SqlCommand cmd = new SqlCommand(query))
                     {
-                    cmd.Parameters.AddWithValue("@Name",txtnamereg.Text);
-                    cmd.Parameters.AddWithValue("@Phone_no", txtphonereg.Text);
-                    cmd.Parameters.AddWithValue("@Gmail", txtemailreg.Text);
-                    cmd.Parameters.AddWithValue("@CNIC", txtcnicreg.Text);
-                    cmd.Parameters.AddWithValue("@Profile_pic",imagebytes);
-                    cmd.Parameters.AddWithValue("@Username", txtusernamereg.Text);
-                    cmd.Parameters.AddWithValue("@Password", txtpasswordreg.Text);
+                        cmd.Parameters.AddWithValue("@Name", txtnamereg.Text);
+                        cmd.Parameters.AddWithValue("@Phone_no", txtphonereg.Text);
+                        cmd.Parameters.AddWithValue("@Gmail", txtemailreg.Text);
+                        cmd.Parameters.AddWithValue("@CNIC", txtcnicreg.Text);
+                        cmd.Parameters.AddWithValue("@Profile_pic", imagebytes);
+                        cmd.Parameters.AddWithValue("@Username", txtusernamereg.Text);
+                        cmd.Parameters.AddWithValue("@Password", txtpasswordreg.Text);
 
 
-                    int rowsaffected = cmd.ExecuteNonQuery();
-                        if (rowsaffected>0)
+                        int rowsaffected = cmd.ExecuteNonQuery();
+                        if (rowsaffected > 0)
                         {
                             MessageBox.Show("Registered successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                            Login login =new Login();
+                            clear();
+                            Login login = new Login();
                             login.Show();
                             this.Hide();
-                        
-                            
+
+
                         }
-                    imagebytes = null;
+                        imagebytes = null;
                     }
+                }
+                catch (Exception ex)
+                { 
+                MessageBox.Show("Something went wrong\n"+ex.Message,"Errorx",MessageBoxButtons.OK,MessageBoxIcon.Error)
+                }
 
             }
         }
