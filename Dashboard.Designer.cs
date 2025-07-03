@@ -250,7 +250,7 @@
             this.btndashboarduser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btndashboarduser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btndashboarduser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndashboarduser.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.btndashboarduser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndashboarduser.ForeColor = System.Drawing.Color.White;
             this.btndashboarduser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(131)))), ((int)(((byte)(101)))));

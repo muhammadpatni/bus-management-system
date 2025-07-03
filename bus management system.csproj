@@ -82,6 +82,30 @@
     <Compile Include="Registration_page.Designer.cs">
       <DependentUpon>Registration_page.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucuserdashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucuserdashboard.Designer.cs">
+      <DependentUpon>ucuserdashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucusermybookings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucusermybookings.Designer.cs">
+      <DependentUpon>ucusermybookings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucuserbook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucuserbook.Designer.cs">
+      <DependentUpon>ucuserbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucuserprofile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucuserprofile.Designer.cs">
+      <DependentUpon>ucuserprofile.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +127,18 @@
     </Compile>
     <EmbeddedResource Include="Registration_page.resx">
       <DependentUpon>Registration_page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucuserbook.resx">
+      <DependentUpon>ucuserbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucuserdashboard.resx">
+      <DependentUpon>ucuserdashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucusermybookings.resx">
+      <DependentUpon>ucusermybookings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucuserprofile.resx">
+      <DependentUpon>ucuserprofile.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -60,19 +60,17 @@ namespace bus_management_system
             }
         }
 
-        public void loadform(object Form)
+        public void loadform(UserControl uc)
         {
             if (this.panelmain.Controls.Count > 0)
             {
                 this.panelmain.Controls.RemoveAt(0);
             }
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.panelmain.Controls.Add(f);
-            this.panelmain.Tag = f;
-            f.Show();
+            uc.Dock = DockStyle.Fill;
+            this.panelmain.Controls.Add(uc);
+            this.panelmain.Tag = uc;
         }
+
 
 
         private void btndashboard_Click(object sender, EventArgs e)
@@ -82,6 +80,7 @@ namespace bus_management_system
             btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            loadform(new ucuserdashboard());
         
         }
 
@@ -106,6 +105,8 @@ namespace bus_management_system
             btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            loadform(new ucusermybookings());
+
         }
 
         private void btnbookuser_Click(object sender, EventArgs e)
@@ -115,9 +116,10 @@ namespace bus_management_system
             btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            loadform(new ucuserbook());
         }
-        
 
+        
 
 
         private void btnprofileuser_Click(object sender, EventArgs e)
@@ -127,8 +129,9 @@ namespace bus_management_system
             btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnlogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-        
-    }
+            loadform(new ucuserprofile());
+
+        }
 
         private void btnlogout_Click(object sender, EventArgs e)
         {
@@ -138,6 +141,10 @@ namespace bus_management_system
             btnbookuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btnprofileuser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             btndashboarduser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+
+            Login login=new Login();
+            login.Show();
+            this.Hide();
         }
     }
 }
