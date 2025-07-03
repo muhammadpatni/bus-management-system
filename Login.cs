@@ -22,7 +22,7 @@ namespace bus_management_system
 
         public void perform_login()
         { 
-            string query = "SELECT * FROM Users WHERE username = '" + txtusername.Text + "' AND password = '" + txtpassword.Text + "' AND Role ='"+txtlogin_as.Text+"' ";
+            string query = "SELECT * FROM Users WHERE Username = '" + txtusername.Text + "' AND Password = '" + txtpassword.Text + "' AND Role ='"+txtlogin_as.Text+"' ";
             DataTable dt = new DataTable(); 
             try
             {
