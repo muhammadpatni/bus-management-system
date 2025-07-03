@@ -7,12 +7,29 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 
 namespace bus_management_system
 {
     public partial class Login : Form
     {
+        private string Adminusername1="Muhammad",Adminpassword1="bse23f098";
+        private string Adminusername2 = "Haram pagal", Adminpassword2 = "bse23f137";
+
+        public Boolean checkloginforadmin(string username, string password)
+        {
+            if (Adminusername1 == username && Adminpassword1 == password)
+            {
+                return true;
+            }
+            else if (Adminusername2 == username && Adminpassword2 == password)
+            {
+                return true;
+            }
+            return false;
+
+        }
         public Login()
         {
             InitializeComponent();
@@ -21,49 +38,49 @@ namespace bus_management_system
         SqlConnection con = new SqlConnection(Constring);
 
         public void perform_login()
-        { 
-            string query = "SELECT * FROM Users WHERE Username = '" + txtusername.Text + "' AND Password = '" + txtpassword.Text + "' AND Role ='"+txtlogin_as.Text+"' ";
-            DataTable dt = new DataTable(); 
-            try
+        {
+            string role = txtlogin_as.Text;
+            if (role == "admin")
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                adapter.Fill(dt);
-
-
-                if (dt.Rows.Count > 0)
+                if (checkloginforadmin(txtusername.Text, txtpassword.Text))
                 {
-                    string role = dt.Rows[0]["login_as"].ToString().ToLower();
-
-                    if (role == "admin")
-                    {
-                        MessageBox.Show("Admin login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard dashboard = new Dashboard();
-                        dashboard.Show();
-                        this.Hide();
-                    }
-                    else if (role == "user")
-                    {
-                        MessageBox.Show("User login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Dashboard dashboard = new Dashboard();
-                        dashboard.Show();
-                        this.Hide();
-                    }
-                    
-                    else
-                    {
-                        MessageBox.Show("Unknown role.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show("Admin login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+            else {
+                string query = "SELECT * FROM Users WHERE Username = '" + txtusername.Text + "' AND Password = '" + txtpassword.Text + "'";
+                DataTable dt = new DataTable();
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                    adapter.Fill(dt);
 
+
+                    if (dt.Rows.Count > 0)
+                    {
+                            MessageBox.Show("User login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Dashboard dashboard = new Dashboard();
+                            dashboard.Show();
+                            this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Something went wrong ", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+            }
         }
         private void btnlogin_Click(object sender, EventArgs e)
         {
