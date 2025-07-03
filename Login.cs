@@ -34,7 +34,7 @@ namespace bus_management_system
         {
             InitializeComponent();
         }
-        static String Constring = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
+       static String Constring = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
         SqlConnection con = new SqlConnection(Constring);
 
         public void perform_login()

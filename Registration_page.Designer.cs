@@ -47,7 +47,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtemailreg = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnregisteration = new Guna.UI2.WinForms.Guna2Button();
             this.back = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -314,22 +314,22 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "CNIC( with out dashes )";
             // 
-            // btnlogin
+            // btnregisteration
             // 
-            this.btnlogin.BorderRadius = 15;
-            this.btnlogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(265, 511);
-            this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(312, 45);
-            this.btnlogin.TabIndex = 27;
-            this.btnlogin.Text = "Register";
-            this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            this.btnregisteration.BorderRadius = 15;
+            this.btnregisteration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnregisteration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnregisteration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnregisteration.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnregisteration.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.btnregisteration.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnregisteration.ForeColor = System.Drawing.Color.White;
+            this.btnregisteration.Location = new System.Drawing.Point(265, 511);
+            this.btnregisteration.Name = "btnregisteration";
+            this.btnregisteration.Size = new System.Drawing.Size(312, 45);
+            this.btnregisteration.TabIndex = 27;
+            this.btnregisteration.Text = "Register";
+            this.btnregisteration.Click += new System.EventHandler(this.btnregisteration_Click);
             // 
             // back
             // 
@@ -395,7 +395,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.back);
-            this.Controls.Add(this.btnlogin);
+            this.Controls.Add(this.btnregisteration);
             this.Controls.Add(this.txtcnicreg);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtemailreg);
@@ -448,7 +448,7 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtemailreg;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button btnlogin;
+        private Guna.UI2.WinForms.Guna2Button btnregisteration;
         private Guna.UI2.WinForms.Guna2Button back;
         private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
         private System.Windows.Forms.Label label12;

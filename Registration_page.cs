@@ -9,16 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace bus_management_system
 {
     public partial class Registration_page : Form
     {
+        byte[] imagebytes;
+
         public Registration_page()
         {
             InitializeComponent();
         }
-
+        string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
+        SqlConnection conn = new SqlConnection();
         private void Registration_page_Load(object sender, EventArgs e)
         {
             this.ActiveControl = label1;
@@ -94,10 +99,7 @@ namespace bus_management_system
             this.Hide();
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -113,12 +115,11 @@ namespace bus_management_system
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-
-                // Load image in PictureBox
-                profilepic.Image = Image.FromFile(openFileDialog.FileName);
+                string filePath = openFileDialog.FileName;
+                imagebytes=File.ReadAllBytes(filePath);
+                profilepic.Image = Image.FromFile(filePath);
                 profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
                 label13.Visible = false;
-
             }
         }
 
@@ -131,6 +132,69 @@ namespace bus_management_system
         private void profilepic_Click(object sender, EventArgs e)
         {
             upload_profile_pic();
+        }
+
+        public Boolean checkuniquepassword(string password)
+        {
+            string query = "select Password from Users where Password='" + password + "'";
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, con);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            if (dataTable.Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        void clear()
+        {
+            txtusernamereg.Clear();
+            txtpasswordreg.Clear();
+            txtcnicreg.Clear();
+            txtphonereg.Clear();
+            txtnamereg.Clear();
+            txtemailreg.Clear();
+            profilepic.Image = null;
+
+        }
+        private void btnregisteration_Click(object sender, EventArgs e)
+        {
+            if (isvalidadd())
+            {
+                if (checkuniquepassword(txtpasswordreg.Text))
+                {
+                    MessageBox.Show("Password already taken,please enter unique password", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string query = "insert into Users (Name,Phone_No,Gmail,CNIC,Profile_pic,Username,Password) values(@Name,@Phone_no,@Gmail,@CNIC,@Profile_pic,@Username,@Password)";
+
+                    using (SqlCommand cmd = new SqlCommand(query))
+                    {
+                    cmd.Parameters.AddWithValue("@Name",txtnamereg.Text);
+                    cmd.Parameters.AddWithValue("@Phone_no", txtphonereg.Text);
+                    cmd.Parameters.AddWithValue("@Gmail", txtemailreg.Text);
+                    cmd.Parameters.AddWithValue("@CNIC", txtcnicreg.Text);
+                    cmd.Parameters.AddWithValue("@Profile_pic",imagebytes);
+                    cmd.Parameters.AddWithValue("@Username", txtusernamereg.Text);
+                    cmd.Parameters.AddWithValue("@Password", txtpasswordreg.Text);
+
+
+                    int rowsaffected = cmd.ExecuteNonQuery();
+                        if (rowsaffected>0)
+                        {
+                            MessageBox.Show("Registered successfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                            Login login =new Login();
+                            login.Show();
+                            this.Hide();
+                        
+                            
+                        }
+                    imagebytes = null;
+                    }
+
+            }
         }
     }
 }
