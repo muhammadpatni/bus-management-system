@@ -197,9 +197,9 @@ namespace bus_management_system
                         imagebytes = null;
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Something went wrong\n" + ex.Message, "Errorx", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (Exception )
+                { 
+                    MessageBox.Show("Something went wrong" , "Errorx", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

@@ -109,19 +109,21 @@
             this.lbtitle.AutoSize = true;
             this.lbtitle.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtitle.ForeColor = System.Drawing.Color.White;
-            this.lbtitle.Location = new System.Drawing.Point(401, 7);
+            this.lbtitle.Location = new System.Drawing.Point(309, 6);
             this.lbtitle.Name = "lbtitle";
             this.lbtitle.Size = new System.Drawing.Size(373, 47);
             this.lbtitle.TabIndex = 0;
             this.lbtitle.Text = "MZ LIBRARY SYSTEM";
+            this.lbtitle.Click += new System.EventHandler(this.lbtitle_Click);
             // 
             // panelmain
             // 
             this.panelmain.BackColor = System.Drawing.Color.White;
             this.panelmain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelmain.Location = new System.Drawing.Point(257, 0);
+            this.panelmain.FillColor = System.Drawing.Color.DimGray;
+            this.panelmain.Location = new System.Drawing.Point(257, 60);
             this.panelmain.Name = "panelmain";
-            this.panelmain.Size = new System.Drawing.Size(1043, 700);
+            this.panelmain.Size = new System.Drawing.Size(1043, 640);
             this.panelmain.TabIndex = 5;
             // 
             // label3
@@ -242,6 +244,7 @@
             this.profilepic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilepic.TabIndex = 30;
             this.profilepic.TabStop = false;
+            this.profilepic.Click += new System.EventHandler(this.profilepic_Click);
             // 
             // btndashboarduser
             // 
@@ -340,8 +343,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 700);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelmain);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.slidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -372,7 +375,6 @@
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private System.Windows.Forms.Label lbtitle;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelmain;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
         private System.Windows.Forms.Label lbusername;
         private System.Windows.Forms.PictureBox btnmenu;
         private System.Windows.Forms.Label label3;
@@ -381,5 +383,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.FlowLayoutPanel slidebar;
         private Guna.UI2.WinForms.Guna2Button btnlogout;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
     }
 }

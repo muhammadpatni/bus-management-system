@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,14 @@ namespace bus_management_system
         bool slidebarexpand;
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            using (MemoryStream ms = new MemoryStream(Form_Manager.login_page.profile_pic))
+            {
+                Image img = Image.FromStream(ms);
+                profilepic.Image = img;
+                profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
 
+            lbusername.Text = Form_Manager.login_page.name;
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
@@ -145,6 +153,16 @@ namespace bus_management_system
             Login login=new Login();
             login.Show();
             this.Hide();
+        }
+
+        private void lbtitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profilepic_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

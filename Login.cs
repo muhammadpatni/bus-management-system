@@ -14,8 +14,14 @@ namespace bus_management_system
 {
     public partial class Login : Form
     {
-        private string Adminusername1="Muhammad",Adminpassword1="bse23f098";
+        private string Adminusername1="Muhammad",Adminpassword1= "bse23f098";
         private string Adminusername2 = "Haram pagal", Adminpassword2 = "bse23f137";
+
+       public string name;
+        public string phone_no;
+        public string cnic;
+         public string gmail;
+         public byte[] profile_pic;
 
         public Boolean checkloginforadmin(string username, string password)
         {
@@ -56,7 +62,7 @@ namespace bus_management_system
                 }
             }
             else {
-                string query = "SELECT * FROM Users WHERE Username = '" + txtusername.Text + "' AND Password = '" + txtpassword.Text + "'";
+                string query = "SELECT Name,Phone_No,CNIC,Gmail,Profile_pic FROM Users WHERE Username = '" + txtusername.Text + "' AND Password = '" + txtpassword.Text + "'";
                 DataTable dt = new DataTable();
                 try
                 {
@@ -66,7 +72,19 @@ namespace bus_management_system
 
                     if (dt.Rows.Count > 0)
                     {
-                            MessageBox.Show("User login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Save data to globally accessible login_page
+                        Form_Manager.login_page = new Login(); // or: new UserSession(); if you use a separate class
+
+                        Form_Manager.login_page.name = dt.Rows[0]["Name"].ToString();
+                        Form_Manager.login_page.phone_no = dt.Rows[0]["Phone_No"].ToString();
+                        Form_Manager.login_page.cnic = dt.Rows[0]["CNIC"].ToString();
+                        Form_Manager.login_page.gmail = dt.Rows[0]["Gmail"].ToString();
+                        Form_Manager.login_page.profile_pic = dt.Rows[0]["profile_pic"] != DBNull.Value
+                            ? (byte[])dt.Rows[0]["profile_pic"]
+                            : null;
+
+
+                        MessageBox.Show("User login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Dashboard dashboard = new Dashboard();
                             dashboard.Show();
                             this.Hide();
