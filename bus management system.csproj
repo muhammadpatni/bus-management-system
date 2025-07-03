@@ -82,6 +82,9 @@
     <Compile Include="Registration_page.Designer.cs">
       <DependentUpon>Registration_page.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="loader.resx">
       <DependentUpon>loader.cs</DependentUpon>
     </EmbeddedResource>

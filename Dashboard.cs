@@ -16,5 +16,15 @@ namespace bus_management_system
         {
             InitializeComponent();
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

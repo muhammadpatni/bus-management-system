@@ -22,8 +22,8 @@ namespace bus_management_system
         {
             InitializeComponent();
         }
-        string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
-        SqlConnection conn = new SqlConnection();
+        static string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
+        SqlConnection conn = new SqlConnection(con);
         private void Registration_page_Load(object sender, EventArgs e)
         {
             this.ActiveControl = label1;
@@ -171,8 +171,9 @@ namespace bus_management_system
                 {
                     string query = "insert into Users (Name,Phone_No,Gmail,CNIC,Profile_pic,Username,Password) values(@Name,@Phone_no,@Gmail,@CNIC,@Profile_pic,@Username,@Password)";
 
-                    using (SqlCommand cmd = new SqlCommand(query))
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        conn.Open();
                         cmd.Parameters.AddWithValue("@Name", txtnamereg.Text);
                         cmd.Parameters.AddWithValue("@Phone_no", txtphonereg.Text);
                         cmd.Parameters.AddWithValue("@Gmail", txtemailreg.Text);
@@ -197,8 +198,8 @@ namespace bus_management_system
                     }
                 }
                 catch (Exception ex)
-                { 
-                MessageBox.Show("Something went wrong\n"+ex.Message,"Errorx",MessageBoxButtons.OK,MessageBoxIcon.Error)
+                {
+                    MessageBox.Show("Something went wrong\n" + ex.Message, "Errorx", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }
