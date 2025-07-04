@@ -20,25 +20,38 @@ namespace bus_management_system
         }
         static string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
         SqlConnection conn = new SqlConnection(con);
+        byte[] imagebytes;
 
-        public void load_data()
-        {
-            
-        }
         private void ucuserprofile_Load(object sender, EventArgs e)
         {
+            getcurrentdataofuser();
 
-        }
-        byte[] imagebytes;
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        }     
+
+        public void getcurrentdataofuser()
         {
+            string query = "select * from Users where CNIC='"+Form_Manager.login_page.cnic+"'";
+            DataTable dt = new DataTable();
+               SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+                adapter.Fill(dt);
 
-        }
+                if (dt.Rows.Count > 0)
+                {
+                  txtnameprofile.Text = dt.Rows[0]["Name"].ToString();
+                   txtphoneprofile.Text = dt.Rows[0]["Phone_No"].ToString();
+                   txtcnicprofile.Text = dt.Rows[0]["CNIC"].ToString();
+                 txtemailprofile.Text= dt.Rows[0]["Gmail"].ToString();
 
-        private void profilepic_Click(object sender, EventArgs e)
-        {
+                using (MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["profile_pic"]))
+                {
+                    Image img = Image.FromStream(ms);
+                    profilepic.Image = img;
+                    profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
+                    imagebytes = null;
+                }
+            }
 
-        }
+            }
 
         private void profilepicedit_Click(object sender, EventArgs e)
         {
@@ -55,11 +68,12 @@ namespace bus_management_system
                     profilepic.Image = Image.FromFile(filePath);
                     profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                    string query = "update Users set Profile_pic = @Profile_pic";
+                    string query = "update Users set Profile_pic = @Profile_pic where CNIC=@cnic";
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@Profile_pic", imagebytes);
+                        cmd.Parameters.AddWithValue("@cnic",txtcnicprofile.Text);
                         int rowsaffected = cmd.ExecuteNonQuery();
                         if (rowsaffected > 0)
                         {

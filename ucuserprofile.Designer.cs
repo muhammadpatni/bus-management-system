@@ -138,7 +138,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(898, 3);
             this.panel2.TabIndex = 40;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtphoneprofile
             // 
@@ -267,7 +266,6 @@
             this.profilepic.Size = new System.Drawing.Size(160, 160);
             this.profilepic.TabIndex = 53;
             this.profilepic.TabStop = false;
-            this.profilepic.Click += new System.EventHandler(this.profilepic_Click);
             // 
             // pictureBox3
             // 
