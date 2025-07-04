@@ -41,11 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.pbphone = new System.Windows.Forms.PictureBox();
-            this.pbname = new System.Windows.Forms.PictureBox();
-            this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pbemail = new System.Windows.Forms.PictureBox();
-            this.pbcnic = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,11 +50,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbcnic = new System.Windows.Forms.PictureBox();
+            this.pbemail = new System.Windows.Forms.PictureBox();
+            this.pbphone = new System.Windows.Forms.PictureBox();
+            this.pbname = new System.Windows.Forms.PictureBox();
+            this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).BeginInit();
             this.SuspendLayout();
             // 
             // profilepicedit
@@ -244,56 +246,6 @@
             this.label12.TabIndex = 54;
             this.label12.Text = "Profile Picture";
             // 
-            // pbphone
-            // 
-            this.pbphone.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pbphone.Location = new System.Drawing.Point(261, 228);
-            this.pbphone.Name = "pbphone";
-            this.pbphone.Size = new System.Drawing.Size(31, 34);
-            this.pbphone.TabIndex = 56;
-            this.pbphone.TabStop = false;
-            // 
-            // pbname
-            // 
-            this.pbname.Image = global::bus_management_system.Properties.Resources.icons8_done_26;
-            this.pbname.Location = new System.Drawing.Point(261, 156);
-            this.pbname.Name = "pbname";
-            this.pbname.Size = new System.Drawing.Size(31, 34);
-            this.pbname.TabIndex = 55;
-            this.pbname.TabStop = false;
-            this.pbname.Click += new System.EventHandler(this.pbname_Click);
-            // 
-            // profilepic
-            // 
-            this.profilepic.BackColor = System.Drawing.Color.Transparent;
-            this.profilepic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.profilepic.FillColor = System.Drawing.Color.DimGray;
-            this.profilepic.ImageRotate = 0F;
-            this.profilepic.Location = new System.Drawing.Point(771, 106);
-            this.profilepic.Name = "profilepic";
-            this.profilepic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.profilepic.Size = new System.Drawing.Size(160, 160);
-            this.profilepic.TabIndex = 53;
-            this.profilepic.TabStop = false;
-            // 
-            // pbemail
-            // 
-            this.pbemail.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pbemail.Location = new System.Drawing.Point(260, 303);
-            this.pbemail.Name = "pbemail";
-            this.pbemail.Size = new System.Drawing.Size(31, 34);
-            this.pbemail.TabIndex = 57;
-            this.pbemail.TabStop = false;
-            // 
-            // pbcnic
-            // 
-            this.pbcnic.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pbcnic.Location = new System.Drawing.Point(260, 374);
-            this.pbcnic.Name = "pbcnic";
-            this.pbcnic.Size = new System.Drawing.Size(31, 34);
-            this.pbcnic.TabIndex = 58;
-            this.pbcnic.TabStop = false;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
@@ -426,11 +378,71 @@
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::bus_management_system.Properties.Resources.icons8_done_30;
+            this.pictureBox1.Location = new System.Drawing.Point(260, 157);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbcnic
+            // 
+            this.pbcnic.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbcnic.Location = new System.Drawing.Point(260, 374);
+            this.pbcnic.Name = "pbcnic";
+            this.pbcnic.Size = new System.Drawing.Size(31, 34);
+            this.pbcnic.TabIndex = 58;
+            this.pbcnic.TabStop = false;
+            // 
+            // pbemail
+            // 
+            this.pbemail.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbemail.Location = new System.Drawing.Point(260, 303);
+            this.pbemail.Name = "pbemail";
+            this.pbemail.Size = new System.Drawing.Size(31, 34);
+            this.pbemail.TabIndex = 57;
+            this.pbemail.TabStop = false;
+            // 
+            // pbphone
+            // 
+            this.pbphone.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbphone.Location = new System.Drawing.Point(261, 228);
+            this.pbphone.Name = "pbphone";
+            this.pbphone.Size = new System.Drawing.Size(31, 34);
+            this.pbphone.TabIndex = 56;
+            this.pbphone.TabStop = false;
+            // 
+            // pbname
+            // 
+            this.pbname.Image = global::bus_management_system.Properties.Resources.icons8_done_26;
+            this.pbname.Location = new System.Drawing.Point(261, 156);
+            this.pbname.Name = "pbname";
+            this.pbname.Size = new System.Drawing.Size(0, 0);
+            this.pbname.TabIndex = 55;
+            this.pbname.TabStop = false;
+            this.pbname.Click += new System.EventHandler(this.pbname_Click);
+            // 
+            // profilepic
+            // 
+            this.profilepic.BackColor = System.Drawing.Color.Transparent;
+            this.profilepic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.profilepic.FillColor = System.Drawing.Color.DimGray;
+            this.profilepic.ImageRotate = 0F;
+            this.profilepic.Location = new System.Drawing.Point(771, 106);
+            this.profilepic.Name = "profilepic";
+            this.profilepic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.profilepic.Size = new System.Drawing.Size(160, 160);
+            this.profilepic.TabIndex = 53;
+            this.profilepic.TabStop = false;
+            // 
             // ucuserprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.showpassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -461,11 +473,12 @@
             this.Name = "ucuserprofile";
             this.Size = new System.Drawing.Size(1042, 644);
             this.Load += new System.EventHandler(this.ucuserprofile_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +513,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CheckBox showpassword;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
