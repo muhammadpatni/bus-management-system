@@ -53,9 +53,14 @@ namespace bus_management_system
                     profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
                     imagebytes = null;
                 }
+
+               pbname.Image = Properties.Resources.icons8_edit_30__1_;
+                pbcnic.Image = Properties.Resources.icons8_edit_30__1_;
+                pbemail.Image = Properties.Resources.icons8_edit_30__1_;
+                pbphone.Image = Properties.Resources.icons8_edit_30__1_;
             }
 
-            }
+        }
 
         private void profilepicedit_Click(object sender, EventArgs e)
         {
@@ -88,9 +93,9 @@ namespace bus_management_system
                     }
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                MessageBox.Show("Something went wrong"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something went wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -112,5 +117,40 @@ namespace bus_management_system
         {
             
         }
+
+        private void pbname_Click_1(object sender, EventArgs e)
+        {
+            if (pbname.Image == Properties.Resources.icons8_edit_30__1_)
+            {
+                pbname.Image = Properties.Resources.icons8_done_30;
+                txtnameprofile.ReadOnly = false;
+            }
+            else if (pbname.Image == Properties.Resources.icons8_done_30)
+            {
+                pbname.Image = Properties.Resources.icons8_edit_30__1_;
+                txtnameprofile.ReadOnly = true;
+               try  {
+                        string query = "update Users set Name = @name where CNIC=@cnic";
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            conn.Open();
+                            cmd.Parameters.AddWithValue("@name", txtnameprofile);
+                            cmd.Parameters.AddWithValue("@cnic", txtcnicprofile.Text);
+                            int rowsaffected = cmd.ExecuteNonQuery();
+                            if (rowsaffected > 0)
+
+                            {
+                            }getcurrentdataofuser();
+                        }
+                    }
+                
+            catch(Exception ex)
+            {
+                    MessageBox.Show("Something went wrong" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
+

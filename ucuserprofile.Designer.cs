@@ -50,18 +50,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbcnic = new System.Windows.Forms.PictureBox();
             this.pbemail = new System.Windows.Forms.PictureBox();
             this.pbphone = new System.Windows.Forms.PictureBox();
-            this.pbname = new System.Windows.Forms.PictureBox();
             this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pbname = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbemail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbname)).BeginInit();
             this.SuspendLayout();
             // 
             // profilepicedit
@@ -378,15 +376,6 @@
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::bus_management_system.Properties.Resources.icons8_done_30;
-            this.pictureBox1.Location = new System.Drawing.Point(260, 157);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox1.TabIndex = 71;
-            this.pictureBox1.TabStop = false;
-            // 
             // pbcnic
             // 
             this.pbcnic.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
@@ -414,16 +403,6 @@
             this.pbphone.TabIndex = 56;
             this.pbphone.TabStop = false;
             // 
-            // pbname
-            // 
-            this.pbname.Image = global::bus_management_system.Properties.Resources.icons8_done_26;
-            this.pbname.Location = new System.Drawing.Point(261, 156);
-            this.pbname.Name = "pbname";
-            this.pbname.Size = new System.Drawing.Size(0, 0);
-            this.pbname.TabIndex = 55;
-            this.pbname.TabStop = false;
-            this.pbname.Click += new System.EventHandler(this.pbname_Click);
-            // 
             // profilepic
             // 
             this.profilepic.BackColor = System.Drawing.Color.Transparent;
@@ -437,12 +416,22 @@
             this.profilepic.TabIndex = 53;
             this.profilepic.TabStop = false;
             // 
+            // pbname
+            // 
+            this.pbname.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbname.Location = new System.Drawing.Point(261, 155);
+            this.pbname.Name = "pbname";
+            this.pbname.Size = new System.Drawing.Size(31, 34);
+            this.pbname.TabIndex = 71;
+            this.pbname.TabStop = false;
+            this.pbname.Click += new System.EventHandler(this.pbname_Click_1);
+            // 
             // ucuserprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbname);
             this.Controls.Add(this.showpassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -455,7 +444,6 @@
             this.Controls.Add(this.pbcnic);
             this.Controls.Add(this.pbemail);
             this.Controls.Add(this.pbphone);
-            this.Controls.Add(this.pbname);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.profilepicedit);
@@ -473,12 +461,11 @@
             this.Name = "ucuserprofile";
             this.Size = new System.Drawing.Size(1042, 644);
             this.Load += new System.EventHandler(this.ucuserprofile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbemail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbname)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,7 +487,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
-        private System.Windows.Forms.PictureBox pbname;
         private System.Windows.Forms.PictureBox pbphone;
         private System.Windows.Forms.PictureBox pbemail;
         private System.Windows.Forms.PictureBox pbcnic;
@@ -513,6 +499,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2CheckBox showpassword;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbname;
     }
 }
