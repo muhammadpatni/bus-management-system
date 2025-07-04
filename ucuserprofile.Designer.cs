@@ -47,8 +47,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,13 +54,12 @@
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // profilepicedit
@@ -312,24 +309,6 @@
             this.linkLabel1.Text = "Profile";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(261, 575);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox5.TabIndex = 69;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(261, 506);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox6.TabIndex = 68;
-            this.pictureBox6.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -369,6 +348,7 @@
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(242, 31);
             this.txtpassword.TabIndex = 65;
+            this.txtpassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -401,6 +381,7 @@
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(242, 31);
             this.txtusername.TabIndex = 63;
+            this.txtusername.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -424,13 +405,33 @@
             this.label7.TabIndex = 60;
             this.label7.Text = "Login Details";
             // 
+            // showpassword
+            // 
+            this.showpassword.AutoSize = true;
+            this.showpassword.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.showpassword.CheckedState.BorderRadius = 0;
+            this.showpassword.CheckedState.BorderThickness = 0;
+            this.showpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.showpassword.Enabled = false;
+            this.showpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.showpassword.Location = new System.Drawing.Point(16, 615);
+            this.showpassword.Name = "showpassword";
+            this.showpassword.Size = new System.Drawing.Size(141, 21);
+            this.showpassword.TabIndex = 70;
+            this.showpassword.Text = "Show Login Details";
+            this.showpassword.UncheckedState.BorderColor = System.Drawing.Color.White;
+            this.showpassword.UncheckedState.BorderRadius = 0;
+            this.showpassword.UncheckedState.BorderThickness = 0;
+            this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
+            // 
             // ucuserprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.showpassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtpassword);
@@ -465,8 +466,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,8 +492,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
@@ -502,5 +499,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtusername;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2CheckBox showpassword;
     }
 }

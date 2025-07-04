@@ -43,6 +43,8 @@ namespace bus_management_system
                    txtphoneprofile.Text = dt.Rows[0]["Phone_No"].ToString();
                    txtcnicprofile.Text = dt.Rows[0]["CNIC"].ToString();
                  txtemailprofile.Text= dt.Rows[0]["Gmail"].ToString();
+                txtusername.Text = dt.Rows[0]["Username"].ToString();
+                txtpassword.Text = dt.Rows[0]["Password"].ToString();
 
                 using (MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["profile_pic"]))
                 {
@@ -89,6 +91,20 @@ namespace bus_management_system
             catch(Exception ex)
             {
                 MessageBox.Show("Something went wrong"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void showpassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showpassword.Checked == true)
+            {
+                txtpassword.UseSystemPasswordChar = false;
+                txtusername.UseSystemPasswordChar=false;
+            }
+            else
+            {
+                txtpassword.UseSystemPasswordChar = true;
+                txtusername.UseSystemPasswordChar = true;
             }
         }
     }
