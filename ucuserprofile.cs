@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using System.Runtime.CompilerServices;
+using Guna.UI2.WinForms;
 
 namespace bus_management_system
 {
@@ -28,21 +30,21 @@ namespace bus_management_system
         {
             getcurrentdataofuser();
 
-        }     
+        }
 
         public void getcurrentdataofuser()
         {
-            string query = "select * from Users where CNIC='"+Form_Manager.login_page.cnic+"'";
+            string query = "select * from Users where CNIC='" + Form_Manager.login_page.cnic + "'";
             DataTable dt = new DataTable();
-               SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-                adapter.Fill(dt);
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            adapter.Fill(dt);
 
-                if (dt.Rows.Count > 0)
-                {
-                  txtnameprofile.Text = dt.Rows[0]["Name"].ToString();
-                   txtphoneprofile.Text = dt.Rows[0]["Phone_No"].ToString();
-                   txtcnicprofile.Text = dt.Rows[0]["CNIC"].ToString();
-                 txtemailprofile.Text= dt.Rows[0]["Gmail"].ToString();
+            if (dt.Rows.Count > 0)
+            {
+                txtnameprofile.Text = dt.Rows[0]["Name"].ToString();
+                txtphoneprofile.Text = dt.Rows[0]["Phone_No"].ToString();
+                txtcnicprofile.Text = dt.Rows[0]["CNIC"].ToString();
+                txtemailprofile.Text = dt.Rows[0]["Gmail"].ToString();
                 txtusername.Text = dt.Rows[0]["Username"].ToString();
                 txtpassword.Text = dt.Rows[0]["Password"].ToString();
 
@@ -54,8 +56,7 @@ namespace bus_management_system
                     imagebytes = null;
                 }
 
-               pbname.Image = Properties.Resources.icons8_edit_30__1_;
-                pbcnic.Image = Properties.Resources.icons8_edit_30__1_;
+                pbname.Image = Properties.Resources.icons8_edit_30__1_;
                 pbemail.Image = Properties.Resources.icons8_edit_30__1_;
                 pbphone.Image = Properties.Resources.icons8_edit_30__1_;
             }
@@ -82,7 +83,7 @@ namespace bus_management_system
                     {
                         conn.Open();
                         cmd.Parameters.AddWithValue("@Profile_pic", imagebytes);
-                        cmd.Parameters.AddWithValue("@cnic",txtcnicprofile.Text);
+                        cmd.Parameters.AddWithValue("@cnic", txtcnicprofile.Text);
                         int rowsaffected = cmd.ExecuteNonQuery();
                         if (rowsaffected > 0)
 
@@ -93,7 +94,7 @@ namespace bus_management_system
                     }
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Something went wrong", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -104,7 +105,7 @@ namespace bus_management_system
             if (showpassword.Checked == true)
             {
                 txtpassword.UseSystemPasswordChar = false;
-                txtusername.UseSystemPasswordChar=false;
+                txtusername.UseSystemPasswordChar = false;
             }
             else
             {
@@ -112,45 +113,132 @@ namespace bus_management_system
                 txtusername.UseSystemPasswordChar = true;
             }
         }
-
-        private void pbname_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void pbname_Click_1(object sender, EventArgs e)
         {
-            if (pbname.Image == Properties.Resources.icons8_edit_30__1_)
+
+            if (pbname.Tag.ToString() == "edit")
             {
                 pbname.Image = Properties.Resources.icons8_done_30;
+                pbname.Tag = "done";
                 txtnameprofile.ReadOnly = false;
-            }
-            else if (pbname.Image == Properties.Resources.icons8_done_30)
-            {
-                pbname.Image = Properties.Resources.icons8_edit_30__1_;
-                txtnameprofile.ReadOnly = true;
-               try  {
-                        string query = "update Users set Name = @name where CNIC=@cnic";
-                        using (SqlCommand cmd = new SqlCommand(query, conn))
-                        {
-                            conn.Open();
-                            cmd.Parameters.AddWithValue("@name", txtnameprofile);
-                            cmd.Parameters.AddWithValue("@cnic", txtcnicprofile.Text);
-                            int rowsaffected = cmd.ExecuteNonQuery();
-                            if (rowsaffected > 0)
+                pbphone.Image = Properties.Resources.icons8_edit_30__1_;
+                pbemail.Image = Properties.Resources.icons8_edit_30__1_;
+                txtphoneprofile.ReadOnly = true;
+                txtemailprofile.ReadOnly = true;
 
-                            {
-                            }getcurrentdataofuser();
-                        }
-                    }
-                
-            catch(Exception ex)
+
+            }
+            else if (pbname.Tag.ToString() == "done")
             {
+                string query = "update Users set Name = @value where CNIC=@cnic";
+                update(pbname, query, txtcnicprofile.Text, txtnameprofile);
+                Form_Manager.user_dashboard.lbusername.Text = txtnameprofile.Text;
+
+            }
+        }
+        private void pbphone_Click(object sender, EventArgs e)
+        {
+            if (pbphone.Tag.ToString() == "edit")
+            {
+                pbphone.Image = Properties.Resources.icons8_done_30;
+                pbphone.Tag = "done";
+                txtphoneprofile.ReadOnly = false;
+                pbname.Image = Properties.Resources.icons8_edit_30__1_;
+                pbemail.Image = Properties.Resources.icons8_edit_30__1_;
+                txtnameprofile.ReadOnly = true;
+                txtemailprofile.ReadOnly = true;
+            }
+            else if (pbphone.Tag.ToString() == "done")
+
+            {
+                string query = "update Users set Phone_No = @value where CNIC=@cnic";
+                update(pbphone, query, txtcnicprofile.Text, txtphoneprofile);
+
+            }
+        }
+        public Boolean isvalidadd()
+        {
+            if (string.IsNullOrEmpty(txtnameprofile.Text))
+            {
+                MessageBox.Show("Please enter Name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (string.IsNullOrEmpty(txtemailprofile.Text))
+            {
+                MessageBox.Show("Please enter Gmail", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            else if (string.IsNullOrEmpty(txtphoneprofile.Text))
+            {
+                MessageBox.Show("Please enter Phone", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+            else if (!double.TryParse(txtphoneprofile.Text, out _))
+            {
+                MessageBox.Show("phone should be in numeric and without dashes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtphoneprofile.Text.Length != 11)
+            {
+                MessageBox.Show("Phone No Should be 11 without dashes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+
+            }
+
+            return true;
+        }
+
+        private void pbemail_Click(object sender, EventArgs e)
+        {
+            if (pbemail.Tag.ToString() == "edit")
+            {
+                pbemail.Image = Properties.Resources.icons8_done_30;
+                pbemail.Tag = "done";
+                txtemailprofile.ReadOnly = false;
+                pbname.Image = Properties.Resources.icons8_edit_30__1_;
+                pbphone.Image = Properties.Resources.icons8_edit_30__1_;
+                txtnameprofile.ReadOnly = true;
+                txtphoneprofile.ReadOnly = true;
+            }
+            else if (pbemail.Tag.ToString() == "done")
+            {
+                string query = "update Users set Gmail = @value where CNIC=@cnic";
+                update(pbemail, query, txtcnicprofile.Text, txtemailprofile);
+            }
+        }
+        public void update(PictureBox picturebox, string query, string cnic, Guna2TextBox textbox)
+        {
+            if (isvalidadd())
+            {
+                picturebox.Image = Properties.Resources.icons8_edit_30__1_;
+                picturebox.Tag = "edit";
+                textbox.ReadOnly = true;
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        conn.Open();
+                        cmd.Parameters.AddWithValue("@value", textbox.Text);
+                        cmd.Parameters.AddWithValue("@cnic", cnic);
+                        int rowsaffected = cmd.ExecuteNonQuery();
+
+                    }
+                    getcurrentdataofuser();
+                }
+
+                catch (Exception ex)
+                {
                     MessageBox.Show("Something went wrong" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
                 }
             }
         }
-
     }
 }
 

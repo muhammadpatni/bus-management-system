@@ -377,7 +377,6 @@
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private System.Windows.Forms.Label lbtitle;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelmain;
-        private System.Windows.Forms.Label lbusername;
         private System.Windows.Forms.PictureBox btnmenu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer slidebartimer;
@@ -386,5 +385,6 @@
         private System.Windows.Forms.FlowLayoutPanel slidebar;
         private Guna.UI2.WinForms.Guna2Button btnlogout;
         public Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
+        public System.Windows.Forms.Label lbusername;
     }
 }

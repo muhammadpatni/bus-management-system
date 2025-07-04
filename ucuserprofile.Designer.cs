@@ -50,12 +50,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.pbcnic = new System.Windows.Forms.PictureBox();
             this.pbemail = new System.Windows.Forms.PictureBox();
             this.pbphone = new System.Windows.Forms.PictureBox();
             this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pbname = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbemail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
@@ -376,15 +374,6 @@
             this.showpassword.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             this.showpassword.CheckedChanged += new System.EventHandler(this.showpassword_CheckedChanged);
             // 
-            // pbcnic
-            // 
-            this.pbcnic.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pbcnic.Location = new System.Drawing.Point(260, 374);
-            this.pbcnic.Name = "pbcnic";
-            this.pbcnic.Size = new System.Drawing.Size(31, 34);
-            this.pbcnic.TabIndex = 58;
-            this.pbcnic.TabStop = false;
-            // 
             // pbemail
             // 
             this.pbemail.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
@@ -393,6 +382,8 @@
             this.pbemail.Size = new System.Drawing.Size(31, 34);
             this.pbemail.TabIndex = 57;
             this.pbemail.TabStop = false;
+            this.pbemail.Tag = "edit";
+            this.pbemail.Click += new System.EventHandler(this.pbemail_Click);
             // 
             // pbphone
             // 
@@ -402,6 +393,8 @@
             this.pbphone.Size = new System.Drawing.Size(31, 34);
             this.pbphone.TabIndex = 56;
             this.pbphone.TabStop = false;
+            this.pbphone.Tag = "edit";
+            this.pbphone.Click += new System.EventHandler(this.pbphone_Click);
             // 
             // profilepic
             // 
@@ -424,6 +417,7 @@
             this.pbname.Size = new System.Drawing.Size(31, 34);
             this.pbname.TabIndex = 71;
             this.pbname.TabStop = false;
+            this.pbname.Tag = "edit";
             this.pbname.Click += new System.EventHandler(this.pbname_Click_1);
             // 
             // ucuserprofile
@@ -441,7 +435,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.pbcnic);
             this.Controls.Add(this.pbemail);
             this.Controls.Add(this.pbphone);
             this.Controls.Add(this.label12);
@@ -461,7 +454,6 @@
             this.Name = "ucuserprofile";
             this.Size = new System.Drawing.Size(1042, 644);
             this.Load += new System.EventHandler(this.ucuserprofile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbemail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbphone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
@@ -489,7 +481,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
         private System.Windows.Forms.PictureBox pbphone;
         private System.Windows.Forms.PictureBox pbemail;
-        private System.Windows.Forms.PictureBox pbcnic;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
