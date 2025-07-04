@@ -17,6 +17,8 @@ namespace bus_management_system
         public ucuserprofile()
         {
             InitializeComponent();
+            Form_Manager.ucuserprofile_page = this;
+
         }
         static string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
         SqlConnection conn = new SqlConnection(con);
@@ -76,6 +78,7 @@ namespace bus_management_system
                         cmd.Parameters.AddWithValue("@cnic",txtcnicprofile.Text);
                         int rowsaffected = cmd.ExecuteNonQuery();
                         if (rowsaffected > 0)
+
                         {
                             Form_Manager.user_dashboard.profilepic.Image = Image.FromFile(filePath);
                         }
@@ -83,9 +86,9 @@ namespace bus_management_system
                     }
                 }
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                MessageBox.Show("Something went wrong", "Errorx", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something went wrong"+ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

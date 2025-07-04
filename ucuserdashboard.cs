@@ -15,6 +15,13 @@ namespace bus_management_system
         public ucuserdashboard()
         {
             InitializeComponent();
+            Form_Manager.ucuserdashboard_page = this;
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

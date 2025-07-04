@@ -59,13 +59,14 @@
             // lbusername
             // 
             this.lbusername.AutoSize = true;
-            this.lbusername.Font = new System.Drawing.Font("Segoe Script", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbusername.Font = new System.Drawing.Font("Segoe Script", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbusername.ForeColor = System.Drawing.Color.White;
-            this.lbusername.Location = new System.Drawing.Point(50, 182);
+            this.lbusername.Location = new System.Drawing.Point(27, 182);
             this.lbusername.Name = "lbusername";
-            this.lbusername.Size = new System.Drawing.Size(155, 40);
+            this.lbusername.Size = new System.Drawing.Size(234, 37);
             this.lbusername.TabIndex = 0;
-            this.lbusername.Text = "User Name";
+            this.lbusername.Text = "Muhammad Patni";
+            this.lbusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel3
             // 
@@ -151,6 +152,7 @@
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(248, 70);
             this.guna2Panel4.TabIndex = 1;
+            this.guna2Panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel4_Paint);
             // 
             // btnmenu
             // 
@@ -166,8 +168,8 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.btnlogout);
             this.guna2Panel2.Controls.Add(this.lbusername);
+            this.guna2Panel2.Controls.Add(this.btnlogout);
             this.guna2Panel2.Controls.Add(this.btnmybookinguser);
             this.guna2Panel2.Controls.Add(this.profilepic);
             this.guna2Panel2.Controls.Add(this.btndashboarduser);

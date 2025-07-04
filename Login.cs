@@ -39,8 +39,11 @@ namespace bus_management_system
         public Login()
         {
             InitializeComponent();
+
+            Form_Manager.login_page = this;
+
         }
-       static String Constring = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
+        static String Constring = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
         SqlConnection con = new SqlConnection(Constring);
 
         public void perform_login()
@@ -73,7 +76,7 @@ namespace bus_management_system
                     if (dt.Rows.Count > 0)
                     {
                         // Save data to globally accessible login_page
-                        Form_Manager.login_page = new Login(); // or: new UserSession(); if you use a separate class
+                        //Form_Manager.login_page = new Login(); // or: new UserSession(); if you use a separate class
 
                         Form_Manager.login_page.name = dt.Rows[0]["Name"].ToString();
                         Form_Manager.login_page.phone_no = dt.Rows[0]["Phone_No"].ToString();
@@ -85,8 +88,8 @@ namespace bus_management_system
 
 
                         MessageBox.Show("User login successful!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Dashboard dashboard = new Dashboard();
-                            dashboard.Show();
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.Show();
                             this.Hide();
                     }
                     else

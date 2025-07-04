@@ -14,7 +14,15 @@ namespace bus_management_system
     {
         public ucuserbook()
         {
+
             InitializeComponent();
+            Form_Manager.ucuserbook_page = this;
+
+        }
+
+        private void ucuserbook_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

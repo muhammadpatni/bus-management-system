@@ -21,6 +21,7 @@ namespace bus_management_system
         public Registration_page()
         {
             InitializeComponent();
+            Form_Manager.registation_page = this;
         }
         static string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
         SqlConnection conn = new SqlConnection(con);

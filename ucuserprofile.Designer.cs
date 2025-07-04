@@ -47,11 +47,22 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // profilepicedit
@@ -80,7 +91,7 @@
             this.txtcnicprofile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcnicprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcnicprofile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcnicprofile.Location = new System.Drawing.Point(16, 364);
+            this.txtcnicprofile.Location = new System.Drawing.Point(16, 372);
             this.txtcnicprofile.Name = "txtcnicprofile";
             this.txtcnicprofile.PlaceholderText = "";
             this.txtcnicprofile.ReadOnly = true;
@@ -93,7 +104,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label10.Location = new System.Drawing.Point(16, 265);
+            this.label10.Location = new System.Drawing.Point(16, 276);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 21);
             this.label10.TabIndex = 47;
@@ -112,7 +123,7 @@
             this.txtemailprofile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtemailprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtemailprofile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtemailprofile.Location = new System.Drawing.Point(16, 289);
+            this.txtemailprofile.Location = new System.Drawing.Point(16, 300);
             this.txtemailprofile.Name = "txtemailprofile";
             this.txtemailprofile.PlaceholderText = "";
             this.txtemailprofile.ReadOnly = true;
@@ -125,7 +136,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label11.Location = new System.Drawing.Point(15, 340);
+            this.label11.Location = new System.Drawing.Point(15, 348);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(179, 21);
             this.label11.TabIndex = 45;
@@ -152,7 +163,7 @@
             this.txtphoneprofile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtphoneprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtphoneprofile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtphoneprofile.Location = new System.Drawing.Point(16, 219);
+            this.txtphoneprofile.Location = new System.Drawing.Point(16, 226);
             this.txtphoneprofile.Name = "txtphoneprofile";
             this.txtphoneprofile.PlaceholderText = "";
             this.txtphoneprofile.ReadOnly = true;
@@ -165,7 +176,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label8.Location = new System.Drawing.Point(16, 127);
+            this.label8.Location = new System.Drawing.Point(16, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 21);
             this.label8.TabIndex = 43;
@@ -184,7 +195,7 @@
             this.txtnameprofile.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtnameprofile.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtnameprofile.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnameprofile.Location = new System.Drawing.Point(16, 151);
+            this.txtnameprofile.Location = new System.Drawing.Point(16, 155);
             this.txtnameprofile.Name = "txtnameprofile";
             this.txtnameprofile.PlaceholderText = "";
             this.txtnameprofile.ReadOnly = true;
@@ -197,7 +208,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label9.Location = new System.Drawing.Point(15, 195);
+            this.label9.Location = new System.Drawing.Point(15, 202);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 21);
             this.label9.TabIndex = 41;
@@ -239,7 +250,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(261, 221);
+            this.pictureBox2.Location = new System.Drawing.Point(261, 228);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 34);
             this.pictureBox2.TabIndex = 56;
@@ -248,7 +259,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 152);
+            this.pictureBox1.Location = new System.Drawing.Point(261, 156);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 34);
             this.pictureBox1.TabIndex = 55;
@@ -270,7 +281,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(260, 292);
+            this.pictureBox3.Location = new System.Drawing.Point(260, 303);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 34);
             this.pictureBox3.TabIndex = 57;
@@ -279,7 +290,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(260, 366);
+            this.pictureBox4.Location = new System.Drawing.Point(260, 374);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(31, 34);
             this.pictureBox4.TabIndex = 58;
@@ -301,11 +312,132 @@
             this.linkLabel1.Text = "Profile";
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(261, 575);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox5.TabIndex = 69;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pictureBox6.Location = new System.Drawing.Point(261, 506);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 34);
+            this.pictureBox6.TabIndex = 68;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.label1.Location = new System.Drawing.Point(-8, 424);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 32);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "_";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.panel1.Location = new System.Drawing.Point(118, 453);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(922, 3);
+            this.panel1.TabIndex = 61;
+            // 
+            // txtpassword
+            // 
+            this.txtpassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.txtpassword.BorderRadius = 7;
+            this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtpassword.DefaultText = "";
+            this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtpassword.Location = new System.Drawing.Point(16, 573);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PlaceholderText = "";
+            this.txtpassword.ReadOnly = true;
+            this.txtpassword.SelectedText = "";
+            this.txtpassword.Size = new System.Drawing.Size(242, 31);
+            this.txtpassword.TabIndex = 65;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.label3.Location = new System.Drawing.Point(16, 481);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 21);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "Username";
+            // 
+            // txtusername
+            // 
+            this.txtusername.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.txtusername.BorderRadius = 7;
+            this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtusername.DefaultText = "";
+            this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtusername.Location = new System.Drawing.Point(16, 505);
+            this.txtusername.Name = "txtusername";
+            this.txtusername.PlaceholderText = "";
+            this.txtusername.ReadOnly = true;
+            this.txtusername.SelectedText = "";
+            this.txtusername.Size = new System.Drawing.Size(242, 31);
+            this.txtusername.TabIndex = 63;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.label5.Location = new System.Drawing.Point(15, 549);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 21);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Password";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.label7.Location = new System.Drawing.Point(11, 441);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 21);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "Login Details";
+            // 
             // ucuserprofile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -333,6 +465,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +493,14 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2TextBox txtpassword;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txtusername;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -15,6 +15,13 @@ namespace bus_management_system
         public ucusermybookings()
         {
             InitializeComponent();
+            Form_Manager.ucusermybookings_page = this;
+
+        }
+
+        private void ucusermybookings_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,6 +16,7 @@ namespace bus_management_system
         public Dashboard()
         {
             InitializeComponent();
+            Form_Manager.user_dashboard = this;
         }
 
         bool slidebarexpand;
@@ -161,6 +162,11 @@ namespace bus_management_system
         }
 
         private void profilepic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

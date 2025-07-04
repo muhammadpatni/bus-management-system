@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "ucuserbook";
             this.Size = new System.Drawing.Size(1042, 644);
+            this.Load += new System.EventHandler(this.ucuserbook_Load);
             this.ResumeLayout(false);
 
         }
