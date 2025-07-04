@@ -412,12 +412,11 @@
             this.showpassword.CheckedState.BorderRadius = 0;
             this.showpassword.CheckedState.BorderThickness = 0;
             this.showpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.showpassword.Enabled = false;
-            this.showpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.showpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.showpassword.Location = new System.Drawing.Point(16, 615);
+            this.showpassword.Location = new System.Drawing.Point(790, 481);
             this.showpassword.Name = "showpassword";
-            this.showpassword.Size = new System.Drawing.Size(141, 21);
+            this.showpassword.Size = new System.Drawing.Size(167, 25);
             this.showpassword.TabIndex = 70;
             this.showpassword.Text = "Show Login Details";
             this.showpassword.UncheckedState.BorderColor = System.Drawing.Color.White;
