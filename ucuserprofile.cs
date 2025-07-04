@@ -107,5 +107,10 @@ namespace bus_management_system
                 txtusername.UseSystemPasswordChar = true;
             }
         }
+
+        private void pbname_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

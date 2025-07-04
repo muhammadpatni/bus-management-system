@@ -41,11 +41,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbphone = new System.Windows.Forms.PictureBox();
+            this.pbname = new System.Windows.Forms.PictureBox();
             this.profilepic = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbemail = new System.Windows.Forms.PictureBox();
+            this.pbcnic = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -55,11 +55,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.showpassword = new Guna.UI2.WinForms.Guna2CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbphone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).BeginInit();
             this.SuspendLayout();
             // 
             // profilepicedit
@@ -244,23 +244,24 @@
             this.label12.TabIndex = 54;
             this.label12.Text = "Profile Picture";
             // 
-            // pictureBox2
+            // pbphone
             // 
-            this.pictureBox2.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(261, 228);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox2.TabIndex = 56;
-            this.pictureBox2.TabStop = false;
+            this.pbphone.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbphone.Location = new System.Drawing.Point(261, 228);
+            this.pbphone.Name = "pbphone";
+            this.pbphone.Size = new System.Drawing.Size(31, 34);
+            this.pbphone.TabIndex = 56;
+            this.pbphone.TabStop = false;
             // 
-            // pictureBox1
+            // pbname
             // 
-            this.pictureBox1.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(261, 156);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
+            this.pbname.Image = global::bus_management_system.Properties.Resources.icons8_done_26;
+            this.pbname.Location = new System.Drawing.Point(261, 156);
+            this.pbname.Name = "pbname";
+            this.pbname.Size = new System.Drawing.Size(31, 34);
+            this.pbname.TabIndex = 55;
+            this.pbname.TabStop = false;
+            this.pbname.Click += new System.EventHandler(this.pbname_Click);
             // 
             // profilepic
             // 
@@ -275,23 +276,23 @@
             this.profilepic.TabIndex = 53;
             this.profilepic.TabStop = false;
             // 
-            // pictureBox3
+            // pbemail
             // 
-            this.pictureBox3.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(260, 303);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox3.TabIndex = 57;
-            this.pictureBox3.TabStop = false;
+            this.pbemail.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbemail.Location = new System.Drawing.Point(260, 303);
+            this.pbemail.Name = "pbemail";
+            this.pbemail.Size = new System.Drawing.Size(31, 34);
+            this.pbemail.TabIndex = 57;
+            this.pbemail.TabStop = false;
             // 
-            // pictureBox4
+            // pbcnic
             // 
-            this.pictureBox4.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(260, 374);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox4.TabIndex = 58;
-            this.pictureBox4.TabStop = false;
+            this.pbcnic.Image = global::bus_management_system.Properties.Resources.icons8_edit_30__1_;
+            this.pbcnic.Location = new System.Drawing.Point(260, 374);
+            this.pbcnic.Name = "pbcnic";
+            this.pbcnic.Size = new System.Drawing.Size(31, 34);
+            this.pbcnic.TabIndex = 58;
+            this.pbcnic.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -439,10 +440,10 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbcnic);
+            this.Controls.Add(this.pbemail);
+            this.Controls.Add(this.pbphone);
+            this.Controls.Add(this.pbname);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.profilepicedit);
@@ -460,11 +461,11 @@
             this.Name = "ucuserprofile";
             this.Size = new System.Drawing.Size(1042, 644);
             this.Load += new System.EventHandler(this.ucuserprofile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbphone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbname)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilepic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbemail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbcnic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,10 +487,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pbname;
+        private System.Windows.Forms.PictureBox pbphone;
+        private System.Windows.Forms.PictureBox pbemail;
+        private System.Windows.Forms.PictureBox pbcnic;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
