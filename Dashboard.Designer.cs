@@ -61,11 +61,11 @@
             this.lbusername.AutoSize = true;
             this.lbusername.Font = new System.Drawing.Font("Segoe Script", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbusername.ForeColor = System.Drawing.Color.White;
-            this.lbusername.Location = new System.Drawing.Point(27, 182);
+            this.lbusername.Location = new System.Drawing.Point(60, 182);
             this.lbusername.Name = "lbusername";
-            this.lbusername.Size = new System.Drawing.Size(234, 37);
+            this.lbusername.Size = new System.Drawing.Size(140, 37);
             this.lbusername.TabIndex = 0;
-            this.lbusername.Text = "Muhammad Patni";
+            this.lbusername.Text = "User Name";
             this.lbusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel3

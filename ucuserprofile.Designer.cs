@@ -33,17 +33,17 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtemailprofile = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.personalpanel = new System.Windows.Forms.Panel();
             this.txtphoneprofile = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtnameprofile = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbprofilepicture = new System.Windows.Forms.Label();
+            this.lbprofile = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.loginpanel = new System.Windows.Forms.Panel();
             this.txtpassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtusername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -137,13 +137,13 @@
             this.label11.TabIndex = 45;
             this.label11.Text = "CNIC( with out dashes )";
             // 
-            // panel2
+            // personalpanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.panel2.Location = new System.Drawing.Point(142, 97);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(898, 3);
-            this.panel2.TabIndex = 40;
+            this.personalpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.personalpanel.Location = new System.Drawing.Point(142, 97);
+            this.personalpanel.Name = "personalpanel";
+            this.personalpanel.Size = new System.Drawing.Size(898, 3);
+            this.personalpanel.TabIndex = 40;
             // 
             // txtphoneprofile
             // 
@@ -231,32 +231,33 @@
             this.label4.TabIndex = 52;
             this.label4.Text = "_";
             // 
-            // label12
+            // lbprofilepicture
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.label12.Location = new System.Drawing.Point(793, 292);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 21);
-            this.label12.TabIndex = 54;
-            this.label12.Text = "Profile Picture";
+            this.lbprofilepicture.AutoSize = true;
+            this.lbprofilepicture.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbprofilepicture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.lbprofilepicture.Location = new System.Drawing.Point(793, 292);
+            this.lbprofilepicture.Name = "lbprofilepicture";
+            this.lbprofilepicture.Size = new System.Drawing.Size(123, 21);
+            this.lbprofilepicture.TabIndex = 54;
+            this.lbprofilepicture.Text = "Profile Picture";
             // 
-            // linkLabel1
+            // lbprofile
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
-            this.linkLabel1.Location = new System.Drawing.Point(399, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(176, 65);
-            this.linkLabel1.TabIndex = 59;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Profile";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.AutoSize = true;
+            this.lbprofile.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbprofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.Location = new System.Drawing.Point(399, 0);
+            this.lbprofile.Name = "lbprofile";
+            this.lbprofile.Size = new System.Drawing.Size(176, 65);
+            this.lbprofile.TabIndex = 59;
+            this.lbprofile.TabStop = true;
+            this.lbprofile.Text = "Profile";
+            this.lbprofile.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(153)))), ((int)(((byte)(119)))));
+            this.lbprofile.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbprofile_LinkClicked);
             // 
             // label1
             // 
@@ -269,13 +270,13 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "_";
             // 
-            // panel1
+            // loginpanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.panel1.Location = new System.Drawing.Point(118, 453);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(922, 3);
-            this.panel1.TabIndex = 61;
+            this.loginpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
+            this.loginpanel.Location = new System.Drawing.Point(118, 453);
+            this.loginpanel.Name = "loginpanel";
+            this.loginpanel.Size = new System.Drawing.Size(922, 3);
+            this.loginpanel.TabIndex = 61;
             // 
             // txtpassword
             // 
@@ -428,23 +429,23 @@
             this.Controls.Add(this.pbname);
             this.Controls.Add(this.showpassword);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.loginpanel);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtusername);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.lbprofile);
             this.Controls.Add(this.pbemail);
             this.Controls.Add(this.pbphone);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lbprofilepicture);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.profilepicedit);
             this.Controls.Add(this.txtcnicprofile);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtemailprofile);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.personalpanel);
             this.Controls.Add(this.txtphoneprofile);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtnameprofile);
@@ -470,20 +471,20 @@
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtemailprofile;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel personalpanel;
         private Guna.UI2.WinForms.Guna2TextBox txtphoneprofile;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox txtnameprofile;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbprofilepicture;
         private Guna.UI2.WinForms.Guna2CirclePictureBox profilepic;
         private System.Windows.Forms.PictureBox pbphone;
         private System.Windows.Forms.PictureBox pbemail;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel lbprofile;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel loginpanel;
         private Guna.UI2.WinForms.Guna2TextBox txtpassword;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtusername;

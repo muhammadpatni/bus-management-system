@@ -50,7 +50,12 @@ namespace bus_management_system
                     profilepic.Location = new Point(6, 38);
                     profilepic.Size = new Size(55, 55);
                     lbusername.Visible = false;
+                    if(Form_Manager.ucuserprofile_page != null)
+                    {
+                        Form_Manager.ucuserprofile_page.interface_adjusment(true);
+                    }
                 }
+
             }
             else
             {
@@ -63,6 +68,10 @@ namespace bus_management_system
                     profilepic.Location = new Point(44, 2);
                     profilepic.Size = new Size(177, 177);
                     lbusername.Visible = true;
+                    if (Form_Manager.ucuserprofile_page != null)
+                    {
+                        Form_Manager.ucuserprofile_page.interface_adjusment(false);
+                    }
                 }
 
 

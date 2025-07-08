@@ -239,6 +239,37 @@ namespace bus_management_system
                 }
             }
         }
+
+        public void interface_adjusment(Boolean is_minimize)
+        {
+            if (is_minimize)
+            {
+                lbprofile.Location = new Point(515, 0);
+                personalpanel.Size = new Size(1076, 3);
+                profilepic.Location = new Point(950, 106);
+                profilepicedit.Location = new Point(1005, 269);
+                lbprofilepicture.Location = new Point(965, 292);
+                loginpanel.Size = new Size(1100, 3);
+                showpassword.Location = new Point(962, 481);
+
+            }
+            else
+            {
+                lbprofile.Location = new Point(399, 0);
+                personalpanel.Size = new Size(898, 3);
+                profilepic.Location = new Point(771, 106);
+                profilepicedit.Location = new Point(836, 269);
+                lbprofilepicture.Location = new Point(793, 292);
+                loginpanel.Size = new Size(922, 3);
+                showpassword.Location = new Point(790, 481);
+            }
+
+        }
+
+        private void lbprofile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }
 
