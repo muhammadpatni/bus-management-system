@@ -22,14 +22,14 @@ namespace bus_management_system
         bool slidebarexpand;
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            using (MemoryStream ms = new MemoryStream(Form_Manager.login_page.profile_pic))
-            {
-                Image img = Image.FromStream(ms);
-                profilepic.Image = img;
-                profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
+        //    using (MemoryStream ms = new MemoryStream(Form_Manager.login_page.profile_pic))
+        //    {
+        //        Image img = Image.FromStream(ms);
+        //        profilepic.Image = img;
+        //        profilepic.SizeMode = PictureBoxSizeMode.StretchImage;
+        //    }
 
-            lbusername.Text = Form_Manager.login_page.name;
+           // lbusername.Text = Form_Manager.login_page.name;
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
