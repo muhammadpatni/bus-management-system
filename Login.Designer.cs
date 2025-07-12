@@ -65,13 +65,13 @@
             this.txtpassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtpassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtpassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtpassword.Enabled = false;
             this.txtpassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtpassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpassword.Location = new System.Drawing.Point(12, 395);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PlaceholderText = "";
+            this.txtpassword.ReadOnly = true;
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(364, 45);
             this.txtpassword.TabIndex = 11;
@@ -100,13 +100,13 @@
             this.txtusername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtusername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtusername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtusername.Enabled = false;
             this.txtusername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtusername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtusername.Location = new System.Drawing.Point(12, 304);
             this.txtusername.Name = "txtusername";
             this.txtusername.PlaceholderText = "";
+            this.txtusername.ReadOnly = true;
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(364, 45);
             this.txtusername.TabIndex = 9;
@@ -132,7 +132,6 @@
             this.showpassword.CheckedState.BorderRadius = 0;
             this.showpassword.CheckedState.BorderThickness = 0;
             this.showpassword.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
-            this.showpassword.Enabled = false;
             this.showpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.showpassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.showpassword.Location = new System.Drawing.Point(254, 446);
@@ -153,7 +152,6 @@
             this.btnlogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnlogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnlogin.Enabled = false;
             this.btnlogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(110)))), ((int)(((byte)(75)))));
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnlogin.ForeColor = System.Drawing.Color.White;

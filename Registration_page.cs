@@ -23,8 +23,8 @@ namespace bus_management_system
             InitializeComponent();
             Form_Manager.registation_page = this;
         }
-        static string con = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
-        SqlConnection conn = new SqlConnection(con);
+        static String Constring = ConnectionString.getConnectionString;
+        SqlConnection conn = new SqlConnection(Constring);
         private void Registration_page_Load(object sender, EventArgs e)
         {
             this.ActiveControl = label1;
@@ -138,7 +138,7 @@ namespace bus_management_system
         public Boolean checkuniquepassword(string password)
         {
             string query = "select Password from Users where Password='" + password + "'";
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, con);
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, Constring);
             DataTable dataTable = new DataTable();
             sqlDataAdapter.Fill(dataTable);
             if (dataTable.Rows.Count > 0)

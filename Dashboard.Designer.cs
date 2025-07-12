@@ -61,7 +61,7 @@
             this.lbusername.AutoSize = true;
             this.lbusername.Font = new System.Drawing.Font("Segoe Script", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbusername.ForeColor = System.Drawing.Color.White;
-            this.lbusername.Location = new System.Drawing.Point(60, 182);
+            this.lbusername.Location = new System.Drawing.Point(30, 182);
             this.lbusername.Name = "lbusername";
             this.lbusername.Size = new System.Drawing.Size(140, 37);
             this.lbusername.TabIndex = 0;
@@ -87,6 +87,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1043, 60);
             this.guna2Panel1.TabIndex = 4;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnclose
             // 

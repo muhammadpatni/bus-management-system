@@ -56,6 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BusCardControl.Designer.cs">
+      <DependentUpon>BusCardControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +114,9 @@
     <Compile Include="ucuserprofile.Designer.cs">
       <DependentUpon>ucuserprofile.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BusCardControl.resx">
+      <DependentUpon>BusCardControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +166,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\bus icn" />
     <None Include="Resources\bus pic 1.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ChatGPT Image Jul 11, 2025, 08_17_08 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-06-28 190700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bus-35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

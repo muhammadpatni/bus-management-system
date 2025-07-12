@@ -63,6 +63,16 @@ namespace bus_management_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bus_icn {
+            get {
+                object obj = ResourceManager.GetObject("bus icn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bus_pic_1 {
             get {
                 object obj = ResourceManager.GetObject("bus pic 1", resourceCulture);
@@ -96,6 +106,16 @@ namespace bus_management_system.Properties {
         internal static System.Drawing.Bitmap icons8_bus_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bus-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bus_35 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bus-35", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,16 @@ namespace bus_management_system.Properties {
         internal static System.Drawing.Bitmap key__1_ {
             get {
                 object obj = ResourceManager.GetObject("key (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_2025_06_28_190700 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot 2025-06-28 190700", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

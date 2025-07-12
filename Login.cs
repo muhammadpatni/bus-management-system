@@ -14,6 +14,7 @@ namespace bus_management_system
 {
     public partial class Login : Form
     {
+
         private string Adminusername1="Muhammad",Adminpassword1= "bse23f098";
         private string Adminusername2 = "Haram pagal", Adminpassword2 = "bse23f137";
 
@@ -21,7 +22,8 @@ namespace bus_management_system
         public string phone_no;
         public string cnic;
          public string gmail;
-         public byte[] profile_pic;
+        public byte[] profile_pic;
+        public bool allowButtonClick = false;
 
         public Boolean checkloginforadmin(string username, string password)
         {
@@ -43,7 +45,7 @@ namespace bus_management_system
             Form_Manager.login_page = this;
 
         }
-        static String Constring = "Data Source=DESKTOP-PQ222BO\\SQLEXPRESS;Initial Catalog=BMS;Integrated Security=True";
+        static String Constring = ConnectionString.getConnectionString;
         SqlConnection con = new SqlConnection(Constring);
 
         public void perform_login()
@@ -105,6 +107,10 @@ namespace bus_management_system
         }
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            if (!allowButtonClick)
+            {
+                return;
+            }
             perform_login();
         }
 
@@ -145,8 +151,19 @@ namespace bus_management_system
             }
         }
 
+        private void ToggleCheckSafely(bool value)
+        {
+            showpassword.CheckedChanged -= showpassword_CheckedChanged; // remove event
+            showpassword.Checked = value;                                // change value
+            showpassword.CheckedChanged += showpassword_CheckedChanged; // reattach
+        }
+
         private void showpassword_CheckedChanged(object sender, EventArgs e)
         {
+            if (!allowButtonClick)
+            {
+                ToggleCheckSafely(!showpassword.Checked);  // safely reverse
+            }
             if (showpassword.Checked == true)
             {
                 txtpassword.UseSystemPasswordChar = false;
@@ -170,10 +187,9 @@ namespace bus_management_system
         private void txtlogin_as_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbnotif.Visible = false;
-            txtpassword.Enabled = true;
-            txtusername.Enabled = true;
-            btnlogin.Enabled=true;
-            showpassword.Enabled = true;
+            txtpassword.ReadOnly = false;
+            txtusername.ReadOnly = false;
+            allowButtonClick = true;
          
 
             if (txtlogin_as.Text == "admin")

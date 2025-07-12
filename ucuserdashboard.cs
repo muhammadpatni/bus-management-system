@@ -23,5 +23,10 @@ namespace bus_management_system
         {
 
         }
+
+        private void ucuserdashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

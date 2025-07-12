@@ -47,6 +47,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ucuserdashboard";
             this.Size = new System.Drawing.Size(1042, 644);
+            this.Load += new System.EventHandler(this.ucuserdashboard_Load);
             this.ResumeLayout(false);
 
         }
