@@ -73,6 +73,26 @@ namespace bus_management_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jul_11__2025__08_17_08_PM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jul 11, 2025, 08_17_08 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_Jul_11__2025__08_58_49_PM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image Jul 11, 2025, 08_58_49 PM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bus_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-bus-100", resourceCulture);
