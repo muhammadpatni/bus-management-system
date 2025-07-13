@@ -123,6 +123,16 @@ namespace bus_management_system.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_bus_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-bus-45", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_customer_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-customer-50", resourceCulture);
@@ -136,6 +146,16 @@ namespace bus_management_system.Properties {
         internal static System.Drawing.Bitmap icons8_dashboard_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-dashboard-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_date_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-date-45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace bus_management_system.Properties {
         internal static System.Drawing.Bitmap icons8_done_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-done-40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_driver_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-driver-45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -206,6 +236,16 @@ namespace bus_management_system.Properties {
         internal static System.Drawing.Bitmap icons8_logout_rounded_left_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-logout-rounded-left-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_time_45 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-time-45", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
