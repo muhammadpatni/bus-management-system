@@ -32,6 +32,7 @@
             this.lbprofile = new System.Windows.Forms.LinkLabel();
             this.tittlebarpanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.panelsearcching = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.datashowpanel = new System.Windows.Forms.FlowLayoutPanel();
             this.seachmainpanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnsearchclear = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.datesearchbus = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.datashowpanel = new System.Windows.Forms.FlowLayoutPanel();
             this.tittlebarpanel.SuspendLayout();
             this.panelsearcching.SuspendLayout();
             this.seachmainpanel.SuspendLayout();
@@ -78,14 +78,24 @@
             // 
             // panelsearcching
             // 
-            this.panelsearcching.Controls.Add(this.datashowpanel);
             this.panelsearcching.Controls.Add(this.seachmainpanel);
-            this.panelsearcching.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelsearcching.Location = new System.Drawing.Point(0, 0);
+            this.panelsearcching.Location = new System.Drawing.Point(218, 199);
             this.panelsearcching.Name = "panelsearcching";
             this.panelsearcching.ShadowDecoration.BorderRadius = 0;
-            this.panelsearcching.Size = new System.Drawing.Size(1042, 644);
+            this.panelsearcching.Size = new System.Drawing.Size(164, 184);
             this.panelsearcching.TabIndex = 63;
+            // 
+            // datashowpanel
+            // 
+            this.datashowpanel.AutoScroll = true;
+            this.datashowpanel.BackColor = System.Drawing.Color.White;
+            this.datashowpanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.datashowpanel.Location = new System.Drawing.Point(493, 251);
+            this.datashowpanel.Name = "datashowpanel";
+            this.datashowpanel.Padding = new System.Windows.Forms.Padding(5);
+            this.datashowpanel.Size = new System.Drawing.Size(97, 44);
+            this.datashowpanel.TabIndex = 63;
+            this.datashowpanel.WrapContents = false;
             // 
             // seachmainpanel
             // 
@@ -298,25 +308,14 @@
             this.guna2Elipse1.BorderRadius = 50;
             this.guna2Elipse1.TargetControl = this.seachmainpanel;
             // 
-            // datashowpanel
-            // 
-            this.datashowpanel.AutoScroll = true;
-            this.datashowpanel.BackColor = System.Drawing.Color.White;
-            this.datashowpanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.datashowpanel.Location = new System.Drawing.Point(809, 104);
-            this.datashowpanel.Name = "datashowpanel";
-            this.datashowpanel.Padding = new System.Windows.Forms.Padding(5);
-            this.datashowpanel.Size = new System.Drawing.Size(97, 44);
-            this.datashowpanel.TabIndex = 63;
-            this.datashowpanel.WrapContents = false;
-            // 
             // ucuserbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.tittlebarpanel);
+            this.Controls.Add(this.datashowpanel);
             this.Controls.Add(this.panelsearcching);
+            this.Controls.Add(this.tittlebarpanel);
             this.Name = "ucuserbook";
             this.Size = new System.Drawing.Size(1042, 644);
             this.Load += new System.EventHandler(this.ucuserbook_Load);

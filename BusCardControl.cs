@@ -15,9 +15,12 @@ namespace bus_management_system
     {
         public BusCardControl()
         {
-            InitializeComponent();
-            this.BackColor = Color.White; // Background color
-            this.Resize += new EventHandler(BusCardControl_Resize);
+            InitializeComponent(); 
+            this.BackColor = Color.White;
+            this.BorderStyle = BorderStyle.None;
+            this.DoubleBuffered = true;
+            this.Resize += BusCardControl_Resize;
+            SetRoundedRegion(20);
         }
 
         private void BusCardControl_Resize(object sender, EventArgs e)

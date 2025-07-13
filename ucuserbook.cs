@@ -76,10 +76,8 @@ namespace bus_management_system
                 datashowpanel.Controls.Add(card);
             }
             panelsearcching.Visible = false;
-
             datashowpanel.Visible = true;
             datashowpanel.BringToFront();
-            datashowpanel.Dock = DockStyle.Fill;
 
         }
 
@@ -91,11 +89,15 @@ namespace bus_management_system
 
         private void ucuserbook_Load(object sender, EventArgs e)
         {
-            panelsearcching.Visible = true;
-            panelsearcching.Dock = DockStyle.Fill;
-
             datashowpanel.Visible = false;
-            datashowpanel.Dock = DockStyle.Fill;
+            datashowpanel.SendToBack();
+            panelsearcching.Visible = true;
+            panelsearcching.BringToFront();
+
+            panelsearcching.Size = new Size(this.Width, this.Height);
+            datashowpanel.Size = new Size(this.Width, this.Height);
+            panelsearcching.Location = new Point(0, 0);
+            datashowpanel.Location = new Point(0, 0);
         }
     }
 }
